@@ -7,7 +7,7 @@
 
 ## 👨‍💻 **Especialista Power Platform | 6+ Anos de Experiência Prática**
 
-Desenvolvedor, arquiteto e consultor especializado em **Microsoft Power Platform**, com atuação contínua desde **2018** e **empresa própria desde 2021**. Atuo em **todas as frentes que mais geram valor e vendas** dentro do ecossistema Microsoft.
+Desenvolvedor, arquiteto e consultor especializado em **Microsoft Power Platform**, com atuação contínua desde **2019** e **empresa própria desde 2021**. Atuo em **todas as frentes que mais geram valor e vendas** dentro do ecossistema Microsoft.
 
 > *Transformo processos manuais em vantagem competitiva através da Power Platform.*
 
@@ -205,7 +205,7 @@ Atuo como **instrutor e mentor desde 2021**, com experiência comprovada em:
 | **🌐 Site** | [logicbin.com.br](https://logicbin.com.br) | Portfólio completo |
 
 **📞 WhatsApp:** (11) 95362-1063  
-**📍 Localização:** São Paulo, Brasil | Atendimento Nacional
+**📍 Localização:** São Paulo, Brasil | Atendimento Nacional e Internacional
 
 ---
 
@@ -234,7 +234,7 @@ Atuo como **instrutor e mentor desde 2021**, com experiência comprovada em:
 
 Este portfólio apresenta **projetos reais, experiências práticas e soluções aplicadas** em ambientes corporativos. Todo o conteúdo é baseado em implementações efetivas com clientes reais.
 
-© 2024 Leonardo Zanré | LogicBin. Todos os direitos reservados.
+© Leonardo Zanré | LogicBin. Todos os direitos reservados.
 
 ---
 
