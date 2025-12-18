@@ -1,108 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Zanre | Portfólio de Projetos</title>
-    <style>
-        /* Estilos para deixar a página bonita */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #666;
-        }
-        .projeto {
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05 );
-        }
-        .projeto h2 {
-            margin-top: 0;
-            color: #0366d6; /* Azul do GitHub */
-        }
-        .projeto video, .projeto img {
-            max-width: 100%;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #888;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Leonardo Zanre</h1>
-            <p>Desenvolvedor e Analista de Dados | Projetos com Power Platform e mais</p>
-        </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonardo Zanré | Power Platform Specialist</title>
 
-<main>
-    <!-- ===== PROJETO 1: APP DE COMPRAS ===== -->
-    <div class="projeto">
-        <h2>Aplicativo de lista de compra em Power Apps</h2>
+  <meta name="description" content="Especialista em Power Platform com mais de 6 anos de experiência. Automação de processos, Power Apps, Power Automate, Power BI e treinamentos corporativos.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      color: #1f2937;
+      background: #f9fafb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0366d6, #0a4aa8);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 8px;
+      margin: 5px;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: white;
+      color: #0366d6;
+    }
+
+    .btn.secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    /* TRUST */
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      text-align: center;
+      margin-top: -40px;
+    }
+
+    .trust-item {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .trust-item strong {
+      font-size: 1.8rem;
+      display: block;
+      color: #0366d6;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-top: 80px;
+    }
+
+    /* SERVICES */
+    .services ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    /* TECH */
+    .tech p {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* PROJECTS */
+    .projects article {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    /* CONTENT */
+    .content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content li {
+      margin-bottom: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #111827;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Especialista em Microsoft Power Platform</h1>
+    <p>
+      Mais de <strong>6 anos de experiência</strong> criando soluções reais
+      com Power Apps, Power Automate, Power BI, integrações corporativas
+      e automação de processos.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projetos" class="btn primary">Ver projetos</a>
+      <a href="#contato" class="btn secondary">Falar comigo</a>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- TRUST -->
+    <section class="trust">
+      <div class="trust-item">
+        <strong>6+ anos</strong>
+        Power Platform
+      </div>
+      <div class="trust-item">
+        <strong>Desde 2021</strong>
+        Empresa própria (LogicBin)
+      </div>
+      <div class="trust-item">
+        <strong>Instrutor</strong>
+        KA Solutions & Impacta
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <h2>O que eu faço</h2>
+      <ul>
+        <li>Automação de processos manuais e repetitivos</li>
+        <li>Aplicativos corporativos em Power Apps</li>
+        <li>Integração com ERPs, APIs e SQL</li>
+        <li>Dashboards e análises em Power BI</li>
+        <li>Consultoria, arquitetura e governança</li>
+        <li>Treinamentos e mentorias em Power Platform</li>
+      </ul>
+    </section>
+
+    <!-- TECH -->
+    <section class="tech">
+      <h2>Tecnologias</h2>
+      <p><strong>Power Platform:</strong> Power Apps, Power Automate (Cloud & Desktop), Power BI, Dataverse, AI Builder, Copilot</p>
+      <p><strong>Microsoft 365:</strong> SharePoint, Teams, Outlook, Forms, Planner, OneDrive</p>
+      <p><strong>Integrações Premium:</strong> SQL Server, PDFs, APIs REST, HTTP, conectores premium</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projetos" class="projects">
+      <h2>Projetos em Destaque</h2>
+
+      <article>
+        <h3>Aplicativo de Lista de Compras</h3>
         <video controls>
-            <source src="app_compras_app.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos.
+          <source src="assets/videos/app_compras_app.mp4" type="video/mp4">
         </video>
         <p>
-            Desenvolvi este aplicativo utilizando Power Apps para simplificar a criação e gerenciamento de listas de compras...
+          Aplicativo desenvolvido em Power Apps para substituir controles manuais
+          e centralizar solicitações de compras com automações e histórico.
         </p>
-        <p><strong>Tecnologias:</strong>Microsoft Power Apps, Microsoft Power Automate e Microsfot SharePoint</p>
-    </div>
+        <p><strong>Tecnologias:</strong> Power Apps, Power Automate, SharePoint</p>
+      </article>
 
-    <!-- ===== PROJETO 2: DASHBOARD DE ANÁLISE ===== -->
-    <div class="projeto">
-        <h2>Aplicativo de gestão operacional</h2>
-        
-        <!-- Se for uma imagem, use a tag <img> -->
-        <img src="app_controle_operacional.mp4" type="video/mp4">
-        
+      <article>
+        <h3>Aplicativo de Gestão Operacional</h3>
+        <video controls>
+          <source src="assets/videos/app_controle_operacional.mp4" type="video/mp4">
+        </video>
         <p>
-            Criei este dashboard interativo no Power BI para analisar os dados de vendas da empresa. 
-            Ele permite visualizar KPIs importantes, como receita, volume de vendas por região e desempenho de produtos.
+          Aplicação corporativa para controle operacional, indicadores,
+          filtros avançados e gestão de processos internos.
         </p>
+        <p><strong>Tecnologias:</strong> Power Apps, Power Automate, SharePoint</p>
+      </article>
+
+      <article>
+        <h3>GED – Gestão Eletrônica de Contratos</h3>
+        <video controls>
+          <source src="assets/videos/ged_contratos.mp4" type="video/mp4">
+        </video>
         <p>
-            <strong>Tecnologias:</strong>Microsoft Power Apps, Microsoft Power Automate e Microsfot SharePoint
+          Solução completa de gestão documental com upload, versionamento,
+          controle de acesso, automações e integração com processos internos.
         </p>
-    </div>
+        <p><strong>Tecnologias:</strong> Power Apps, Power Automate, SharePoint, PDFs</p>
+      </article>
+    </section>
 
-    <!-- ===== PROJETO 3: ... ===== -->
-    <!-- Cole o próximo bloco aqui -->
+    <!-- CONTENT -->
+    <section class="content">
+      <h2>Conteúdo e Educação</h2>
+      <ul>
+        <li>▶️ YouTube: <a href="https://www.youtube.com/@leonardozanre-logicbin" target="_blank">Canal Técnico Power Platform</a></li>
+        <li>📚 Udemy: <a href="https://www.udemy.com/course/desvendando-a-power-plaform-do-basico-ao-avancado/" target="_blank">Curso do Básico ao Avançado</a></li>
+        <li>📸 Instagram: <a href="https://www.instagram.com/logicbinofficial/" target="_blank">@logicbinofficial</a></li>
+      </ul>
+    </section>
 
-</main>
+    <!-- CTA -->
+    <section id="contato" class="cta">
+      <h2>Vamos conversar?</h2>
+      <p>
+        Se você precisa automatizar processos, criar aplicativos corporativos
+        ou capacitar seu time em Power Platform, entre em contato.
+      </p>
+      <p>
+        📧 <a href="mailto:leonardo.zanre@logicbin.com.br" style="color:#60a5fa;">
+          leonardo.zanre@logicbin.com.br
+        </a>
+      </p>
+    </section>
 
+  </div>
 
-        <footer>
-            <p>Contato: leonardo.zanre@logicbin.com.br | <a href="https://www.linkedin.com/in/leonardozanre/">LinkedIn</a></p>
-        </footer>
-    </div>
+  <footer>
+    © Leonardo Zanré | LogicBin
+  </footer>
+
 </body>
 </html>
