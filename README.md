@@ -53,13 +53,10 @@ Atuo como **instrutor e mentor desde 2021**, com experiência comprovada em:
 - **Impacta** – Cursos técnicos e capacitação especializada
 
 ### 📚 **Áreas de Ensino**
-- **Power Apps** (Canvas Apps, Model-Driven Apps)
-- **Power Automate** (Cloud, Desktop RPA)
-- **Power BI** (Dashboards, DAX, Modelagem)
-- **Dataverse** & Arquitetura de Dados
-- **Governança** e Melhores Práticas
+- **Power Apps** (Canvas Apps)
+- **Power Automate** (Cloud)
 - **AI Builder** & Automação Inteligente
-- **Copilot Studio** & Assistentes Virtuais
+- **SharePoint Online** & Gestão de Dados
 
 ---
 
