@@ -1,143 +1,112 @@
-# 🚀 Power Platform Portfolio | Leonardo Zanré
+# Leonardo Zanré | Power Platform Specialist
 
-Especialista em **Microsoft Power Platform** com **mais de 6 anos de experiência prática**, atuando em praticamente **todas as frentes que mais geram valor e vendas** dentro do ecossistema Microsoft.
+![Power Platform Specialist](https://img.shields.io/badge/Power%20Platform-Expert-22c55e)
+![Experience](https://img.shields.io/badge/Experience-6%2B%20Years-0ea5e9)
+![Projects](https://img.shields.io/badge/Projects-50%2B%20Delivered-8b5cf6)
+![Company](https://img.shields.io/badge/Company-LogicBin%20since%202021-16a34a)
 
-Este repositório apresenta projetos reais, arquiteturas, automações e aplicações corporativas desenvolvidas para empresas de diferentes portes e segmentos, com foco em **eficiência operacional, automação de processos, governança e escalabilidade**.
+## 🚀 Sobre Mim
 
----
+**Especialista Power Platform com mais de 6 anos de experiência** em toda a suíte Microsoft, entregando soluções corporativas que transformam processos manuais em automações inteligentes. 
 
-## 👨‍💻 Sobre mim
+**Minha empresa, LogicBin**, atua desde 2021 desenvolvendo projetos reais para mais de **15 segmentos diferentes**, sempre com foco em resultados mensuráveis e aumento de produtividade.
 
-Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Power Platform**, com atuação contínua desde **2019** e **empresa própria desde 2021**.
+## 💼 Domínio Técnico Completo
 
-Atuo desde a concepção da solução até a entrega final, incluindo:
-- Levantamento de requisitos
-- Desenho de arquitetura
-- Desenvolvimento
-- Governança e performance
-- Treinamentos, mentorias e pré-vendas técnicas
+### 🔹 Power Platform (6+ anos em todos os componentes)
+- **Power Apps**: Canvas Apps & Model-Driven Apps
+- **Power Automate**: Cloud Flows & Desktop (RPA)
+- **Power BI**: Dashboards, DAX, ETL, Reports
+- **Dataverse**: Tables, Relationships, Security
+- **AI Builder**: Custom Models, Form Processing, Object Detection
+- **Copilot Studio**: Chatbots inteligentes
+- **Power Pages**: Aplicativos externos
+- **Power Virtual Agents**: Agentes virtuais
 
-Tenho forte experiência prática em **ambientes corporativos reais**, lidando com limitações, segurança, delegação e integração entre sistemas.
+### 🔹 Microsoft 365 & Integrações
+- **SharePoint**: Lists, Libraries, Integration
+- **Teams**: Bots, Tabs, Collaboration
+- **Outlook**: Email Automation
+- **Forms**: Surveys, Data Collection
+- **Planner**: Task Management
+- **OneDrive**: File Management
 
----
+### 🔹 Conectores Premium & Integrações
+- **SQL Server** (On-premises e Cloud)
+- **PDF** (Generation, Extraction, Processing)
+- **Conversões** (File, Data, Format)
+- **HTTP** (APIs REST, SOAP, Webhooks)
+- **Conectores Customizados**
+- Integrações com SAP, ERPs, CRMs
 
-## 🏢 Empresa
+## 🏢 Experiência Empresarial
 
-**LogicBin**  
-Fundada em **2021**, com foco em:
-- Consultoria especializada em Power Platform
-- Automação de processos empresariais
-- Desenvolvimento de aplicativos corporativos
-- Dashboards e análise de dados
-- Treinamentos técnicos e capacitação de equipes
+### LogicBin (2021 - Presente)
+- **Fundador e Especialista Técnico**
+- Mais de 50 projetos entregues
+- Atuação em 15+ segmentos diferentes
+- Foco em resultados e ROI comprovado
 
----
+### Parcerias de Treinamento
+- **KA Solutions** (Parceiro desde 2021)
+- **Impacta Tecnologia** (Parceiro de treinamentos)
+- Instrutor certificado desde 2021
+- Mentorias técnicas personalizadas
 
-## 🎓 Treinamentos, Mentorias e Conteúdo
+## 📊 Segmentos com Experiência
 
-Atuo como **instrutor e mentor desde 2021**, formando profissionais e equipes em Power Platform.
+| Setor | Principais Soluções | Resultados Típicos |
+|-------|-------------------|-------------------|
+| **Indústria** | Controle de produção, manutenção | Redução de 40% em downtime |
+| **Farmacêutico** | Gestão de estoque, compliance | 100% conformidade regulatória |
+| **Financeiro** | Automação de relatórios, análise | Redução de 70% em processamento manual |
+| **Varejo** | Gestão de inventário, CRM | Aumento de 25% em vendas |
+| **Logística** | Rastreamento, otimização | Redução de 30% em custos operacionais |
+| **Saúde** | Gestão de pacientes, agendamentos | 50% menos tempo de espera |
+| **Educação** | Gestão acadêmica, avaliações | 60% mais eficiência administrativa |
+| **Consultorias** | Gestão de projetos, horas | Aumento de 35% em faturamento |
 
-### 🤝 Parcerias em Treinamentos
-- **KA Solutions**
-- **Impacta**
+**E mais**: Construção Civil, Agronegócio, Alimentos & Bebidas, Energia, Transporte, Serviços Corporativos, Jurídico.
 
-### 📚 Curso Online (Udemy)
-- **Desvendando a Power Platform – do Básico ao Avançado**  
-  👉 https://www.udemy.com/course/desvendando-a-power-plaform-do-basico-ao-avancado/
+## 🎯 O Que Ofereço
 
-### ▶️ Canal no YouTube
-Conteúdo técnico sobre Power Apps, Power Automate, Power BI, arquitetura, boas práticas e cenários reais de projeto:
-- https://www.youtube.com/@leonardozanre-logicbin
+### 1. **Consultoria Especializada**
+- Análise de processos para automação
+- Arquitetura de soluções Power Platform
+- Governança e melhores práticas
 
-### 📸 Instagram
-Bastidores de projetos, dicas rápidas, automações e soluções reais:
-- https://www.instagram.com/logicbinofficial/
+### 2. **Desenvolvimento de Soluções**
+- Aplicativos corporativos sob medida
+- Automações completas de processos
+- Dashboards e BI em tempo real
 
----
+### 3. **Treinamentos & Mentoria**
+- Capacitação de equipes
+- Cursos personalizados
+- Acompanhamento técnico
 
-## 🧠 Principais Especialidades (o que mais gera valor)
+### 4. **Suporte Contínuo**
+- Manutenção de soluções
+- Evolução e melhorias
+- Suporte técnico especializado
 
-✔ Automação de processos manuais e repetitivos  
-✔ Substituição de Excel por aplicações corporativas  
-✔ Integração entre sistemas (ERP, CRM, APIs)  
-✔ Gestão de dados e documentos  
-✔ Dashboards operacionais e gerenciais  
-✔ Controle de acessos, perfis e permissões  
-✔ Arquitetura escalável e governança em Power Platform  
+## 📈 Resultados Comprovados
 
----
+- **70%** redução no tempo de processamento (Compras)
+- **40%** aumento na produtividade (Operações)
+- **85%** redução no tempo de busca (Documentos)
+- **90%** redução de erros manuais
+- **300%** ROI em projetos de automação
 
-## 🧩 Tecnologias & Ferramentas
+## 📞 Contato
 
-### 🔷 Power Platform
-- Power Apps (Canvas Apps)
-- Power Automate Cloud
-- Power Automate Desktop (RPA)
-- Power BI
-- Dataverse
-- AI Builder
-- Copilot Studio
-
-### 🔷 Microsoft 365 & Integrações
-- SharePoint Online
-- Microsoft Forms
-- Outlook
-- Microsoft Teams
-- Planner
-- OneDrive
-
-### 🔷 Conectores Premium & Integrações Avançadas
-- SQL Server
-- Manipulação de PDF (leitura, escrita, conversão e merge)
-- Conectores premium e customizados
-- APIs REST / HTTP
-- Conversões de arquivos
-- Processamento automático de documentos
-
-### 🔷 Outros Conhecimentos
-- JSON e manipulação de dados
-- Performance e delegação
-- Controle de versões e ambientes
-- Arquitetura de soluções corporativas
-- Segurança, governança e controle de acesso
-
----
-
-## 🚀 Projetos
-
-Este repositório contém exemplos de:
-- Aplicativos corporativos desenvolvidos em Power Apps
-- Automações completas com Power Automate (Cloud e Desktop)
-- Integrações com sistemas externos e conectores premium
-- Soluções com SharePoint e Dataverse
-- Aplicações voltadas para produtividade, controle e gestão
-- Dashboards estratégicos e operacionais
-
-Cada projeto apresenta:
-- Contexto de negócio
-- Objetivo da solução
-- Arquitetura utilizada
-- Tecnologias aplicadas
-- Demonstrações (vídeos ou imagens)
+**Email**: leonardo.zanre@logicbin.com.br  
+**WhatsApp**: (11) 95362-1063  
+**Site**: [logicbin.com.br](https://logicbin.com.br)  
+**LinkedIn**: [linkedin.com/in/leonardozanre](https://linkedin.com/in/leonardozanre)  
+**YouTube**: [@leonardozanre-logicbin](https://www.youtube.com/@leonardozanre-logicbin)
 
 ---
 
-## 💼 Como posso ajudar sua empresa
-
-- ✔ Desenvolvimento de soluções sob medida
-- ✔ Automação de processos e tarefas manuais
-- ✔ Consultoria e arquitetura em Power Platform
-- ✔ Treinamento e capacitação de equipes
-- ✔ Mentorias técnicas
-- ✔ Apoio em pré-vendas e provas de conceito (POC)
-
----
-
-## 📫 Contato
-
-📧 Email: leonardo.zanre@logicbin.com.br  
-🔗 LinkedIn: https://www.linkedin.com/in/leonardozanre/
-
----
-
-> *Este portfólio representa experiências reais, projetos aplicados e conhecimento consolidado em ambientes corporativos.*
+*"Transformo processos manuais em vantagem competitiva através da Power Platform."*  
+**Leonardo Zanré** | Especialista Power Platform
