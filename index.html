@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonardo Zanré | Especialista Power Platform - 6+ Anos de Experiência</title>
-    <meta name="description" content="Especialista Power Platform com 6+ anos em Power Apps, Power Automate, Power BI, AI Builder, Copilot, SharePoint, Dataverse. Empresa LogicBin desde 2021. Consultoria, automação e treinamentos.">
+    <meta name="description" content="Especialista Power Platform com 6+ anos em Power Apps, Power Automate, Power BI, AI Builder, Copilot. Consultoria, automação e treinamentos. Atendimento nacional e internacional.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@
             font-weight: 600;
         }
 
-        /* Botões */
+        /* Botões com cursor pointer */
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -126,6 +126,7 @@
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+            background: linear-gradient(90deg, #16a34a, var(--accent-primary));
         }
 
         .btn-secondary {
@@ -137,6 +138,14 @@
         .btn-secondary:hover {
             background: rgba(14, 165, 233, 0.1);
             transform: translateY(-3px);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        /* Links com cursor pointer */
+        a {
+            cursor: pointer;
+            transition: var(--transition);
         }
 
         /* Hero */
@@ -192,6 +201,7 @@
             border: 1px solid var(--border-color);
             transition: var(--transition);
             box-shadow: var(--shadow);
+            cursor: pointer;
         }
 
         .stat-card:hover {
@@ -228,7 +238,7 @@
             transform: translateX(-50%);
         }
 
-        /* Cards */
+        /* Cards com hover */
         .card {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -237,6 +247,7 @@
             transition: var(--transition);
             height: 100%;
             box-shadow: var(--shadow);
+            cursor: pointer;
         }
 
         .card:hover {
@@ -257,11 +268,38 @@
             gap: 30px;
         }
 
-        /* Tecnologias */
+        /* Tecnologias - Design Profissional */
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tech-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .tech-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            color: var(--accent-primary);
         }
 
         .tech-tag {
@@ -273,6 +311,13 @@
             font-size: 0.9rem;
             margin: 5px;
             border: 1px solid rgba(14, 165, 233, 0.3);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .tech-tag:hover {
+            background: rgba(14, 165, 233, 0.2);
+            transform: translateY(-2px);
         }
 
         .tech-tag-primary {
@@ -287,7 +332,7 @@
             border-color: rgba(139, 92, 246, 0.3);
         }
 
-        /* Setores - Layout Grid Balanceado */
+        /* Setores */
         .sectors-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -307,6 +352,7 @@
             align-items: center;
             justify-content: center;
             min-height: 150px;
+            cursor: pointer;
         }
 
         .sector-card:hover {
@@ -322,7 +368,7 @@
             margin-bottom: 15px;
         }
 
-        /* Projetos */
+        /* Projetos com correção de vídeos */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -335,6 +381,7 @@
             overflow: hidden;
             border: 1px solid var(--border-color);
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .project-card:hover {
@@ -383,26 +430,6 @@
 
         .project-content {
             padding: 25px;
-        }
-
-        /* Experiência Expandida */
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .experience-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 30px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-secondary);
         }
 
         /* CTA */
@@ -461,11 +488,26 @@
             color: var(--text-primary);
             font-size: 1.2rem;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .social-link:hover {
             background: var(--accent-primary);
             transform: translateY(-5px);
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: var(--accent-secondary);
         }
 
         .copyright {
@@ -563,7 +605,7 @@
                 <p class="lead">
                     Conecte sistemas, elimine tarefas repetitivas e crie aplicativos corporativos 
                     <span class="highlight">sem depender de TI</span>. Mais de <span class="highlight">50 projetos entregues</span> com 
-                    aumento de produtividade comprovado. Especialista em <span class="highlight">Power Apps, Power Automate, Power BI, AI Builder, Copilot, SharePoint, Dataverse</span> e toda a suíte Microsoft.
+                    aumento de produtividade comprovado. Especialista em <span class="highlight">Power Apps, Power Automate, Power BI, AI Builder, Copilot</span> e toda a suíte Microsoft.
                 </p>
                 <div class="hero-actions">
                     <a href="#projetos" class="btn btn-primary">
@@ -612,7 +654,7 @@
                     </div>
                     <h3>Automação Inteligente</h3>
                     <p>Substitua planilhas e processos manuais por fluxos automatizados que reduzem erros em até 90% e liberam sua equipe para atividades estratégicas.</p>
-                    <div class="tech-tags">
+                    <div>
                         <span class="tech-tag">Power Automate</span>
                         <span class="tech-tag">RPA Desktop</span>
                         <span class="tech-tag">AI Builder</span>
@@ -626,7 +668,7 @@
                     </div>
                     <h3>Aplicativos Corporativos</h3>
                     <p>Crie apps customizados para necessidades específicas sem precisar de desenvolvedores. Model-Driven e Canvas Apps para qualquer dispositivo.</p>
-                    <div class="tech-tags">
+                    <div>
                         <span class="tech-tag">Power Apps</span>
                         <span class="tech-tag">Model-Driven</span>
                         <span class="tech-tag">Canvas Apps</span>
@@ -640,7 +682,7 @@
                     </div>
                     <h3>Dashboards & BI</h3>
                     <p>Transforme dados em insights acionáveis. Tome decisões baseadas em dados em tempo real com visualizações interativas e relatórios automáticos.</p>
-                    <div class="tech-tags">
+                    <div>
                         <span class="tech-tag">Power BI</span>
                         <span class="tech-tag">DAX</span>
                         <span class="tech-tag">Dashboards</span>
@@ -651,19 +693,25 @@
         </div>
     </section>
 
-    <!-- Domínio Técnico Expandido -->
+    <!-- Domínio Técnico - Design Profissional -->
     <section id="tecnologias">
         <div class="container">
             <div class="section-title">
-                <h2>Domínio Técnico Completo</h2>
-                <p class="lead">6+ anos de experiência em toda a suíte Microsoft Power Platform</p>
+                <h2>6+ Anos de Experiência em Toda a Suíte Microsoft Power Platform</h2>
+                <p class="lead">Domínio técnico completo nas tecnologias que mais geram valor</p>
             </div>
             
-            <div class="experience-grid">
-                <div class="experience-card fade-in">
-                    <h3><i class="fab fa-microsoft"></i> Power Platform (6+ anos)</h3>
-                    <p>Especialista certificado em toda a suíte:</p>
-                    <div>
+            <div class="tech-grid">
+                <!-- Power Platform Card -->
+                <div class="tech-card fade-in">
+                    <div class="tech-header">
+                        <div class="tech-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Power Platform<br><span style="font-size: 0.9rem; color: var(--text-muted);">(6+ anos de experiência)</span></h3>
+                    </div>
+                    <p>Especialista certificado em toda a suíte Microsoft:</p>
+                    <div style="margin-top: 20px;">
                         <span class="tech-tag tech-tag-primary">Power Apps (Canvas + Model)</span>
                         <span class="tech-tag tech-tag-primary">Power Automate (Cloud + Desktop)</span>
                         <span class="tech-tag tech-tag-primary">Power BI (Dashboards + DAX)</span>
@@ -675,10 +723,16 @@
                     </div>
                 </div>
                 
-                <div class="experience-card fade-in stagger-delay-1">
-                    <h3><i class="fas fa-cogs"></i> Microsoft 365 & Conectores</h3>
-                    <p>Integrações nativas e premium:</p>
-                    <div>
+                <!-- Microsoft 365 & Conectores Card -->
+                <div class="tech-card fade-in stagger-delay-1">
+                    <div class="tech-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Microsoft 365 & Conectores Premium</h3>
+                    </div>
+                    <p>Integrações nativas e premium com sistemas corporativos:</p>
+                    <div style="margin-top: 20px;">
                         <span class="tech-tag">SharePoint (Lists + Libraries)</span>
                         <span class="tech-tag">Teams (Bots + Tabs)</span>
                         <span class="tech-tag">Outlook (Email Automation)</span>
@@ -694,26 +748,33 @@
                     </div>
                 </div>
                 
-                <div class="experience-card fade-in stagger-delay-2">
-                    <h3><i class="fas fa-graduation-cap"></i> Treinamentos & Mentoria</h3>
-                    <p>Parcerias e experiência em educação:</p>
-                    <div>
-                        <span class="tech-tag tech-tag-tertiary">Instrutor desde 2021</span>
-                        <span class="tech-tag">Parceria KA Solutions</span>
-                        <span class="tech-tag">Parceria Impacta</span>
+                <!-- Treinamentos & Mentoria Card -->
+                <div class="tech-card fade-in stagger-delay-2">
+                    <div class="tech-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Treinamentos & Mentoria<br><span style="font-size: 0.9rem; color: var(--text-muted);">(Instrutor desde 2021)</span></h3>
+                    </div>
+                    <p>Experiência em educação e parcerias estratégicas:</p>
+                    <div style="margin-top: 20px;">
+                        <span class="tech-tag tech-tag-tertiary">Parceria KA Solutions</span>
+                        <span class="tech-tag tech-tag-tertiary">Parceria Impacta</span>
                         <span class="tech-tag">Treinamentos Corporativos</span>
                         <span class="tech-tag">Mentorias Técnicas</span>
                         <span class="tech-tag">Cursos Personalizados</span>
                         <span class="tech-tag">Workshops Práticos</span>
                         <span class="tech-tag">Capacitação de Equipes</span>
                     </div>
-                    <p style="margin-top: 15px; font-size: 0.9rem;"><i class="fas fa-building"></i> <strong>LogicBin</strong> - Minha empresa desde 2021</p>
+                    <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <p style="font-size: 0.95rem; margin-bottom: 0;"><i class="fas fa-building"></i> <strong>LogicBin</strong> - Minha empresa desde 2021</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Setores Expandidos -->
+    <!-- Setores -->
     <section id="setores">
         <div class="container">
             <div class="section-title">
@@ -727,7 +788,7 @@
                         <i class="fas fa-industry"></i>
                     </div>
                     <h4>Indústria</h4>
-                    <p>Controle de produção, manutenção e qualidade</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Controle de produção, manutenção e qualidade</p>
                 </div>
                 
                 <div class="sector-card fade-in stagger-delay-1">
@@ -735,7 +796,7 @@
                         <i class="fas fa-pills"></i>
                     </div>
                     <h4>Farmacêutico</h4>
-                    <p>Gestão de estoque, compliance e documentação</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Gestão de estoque, compliance e documentação</p>
                 </div>
                 
                 <div class="sector-card fade-in stagger-delay-2">
@@ -743,7 +804,7 @@
                         <i class="fas fa-university"></i>
                     </div>
                     <h4>Financeiro</h4>
-                    <p>Automação de relatórios, conciliação e análise</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Automação de relatórios, conciliação e análise</p>
                 </div>
                 
                 <div class="sector-card fade-in stagger-delay-3">
@@ -751,7 +812,7 @@
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <h4>Varejo</h4>
-                    <p>Gestão de inventário, vendas e CRM</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Gestão de inventário, vendas e CRM</p>
                 </div>
                 
                 <div class="sector-card fade-in">
@@ -759,7 +820,7 @@
                         <i class="fas fa-truck"></i>
                     </div>
                     <h4>Logística</h4>
-                    <p>Rastreamento, otimização de rotas e supply chain</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Rastreamento, otimização de rotas e supply chain</p>
                 </div>
                 
                 <div class="sector-card fade-in stagger-delay-1">
@@ -767,7 +828,7 @@
                         <i class="fas fa-heartbeat"></i>
                     </div>
                     <h4>Saúde</h4>
-                    <p>Gestão de pacientes, agendamentos e prontuários</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Gestão de pacientes, agendamentos e prontuários</p>
                 </div>
                 
                 <div class="sector-card fade-in stagger-delay-2">
@@ -775,7 +836,7 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h4>Educação</h4>
-                    <p>Gestão acadêmica, matrículas e avaliações</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Gestão acadêmica, matrículas e avaliações</p>
                 </div>
                 
                 <div class="sector-card fade-in stagger-delay-3">
@@ -783,69 +844,13 @@
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <h4>Consultorias</h4>
-                    <p>Gestão de projetos, horas e clientes</p>
-                </div>
-                
-                <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h4>Jurídico</h4>
-                    <p>Gestão de contratos, prazos e documentos</p>
-                </div>
-                
-                <div class="sector-card fade-in stagger-delay-1">
-                    <div class="sector-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h4>Construção Civil</h4>
-                    <p>Gestão de obras, materiais e equipes</p>
-                </div>
-                
-                <div class="sector-card fade-in stagger-delay-2">
-                    <div class="sector-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h4>Agronegócio</h4>
-                    <p>Controle de produção, estoque e distribuição</p>
-                </div>
-                
-                <div class="sector-card fade-in stagger-delay-3">
-                    <div class="sector-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h4>Alimentos & Bebidas</h4>
-                    <p>Controle de qualidade, produção e distribuição</p>
-                </div>
-                
-                <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-gas-pump"></i>
-                    </div>
-                    <h4>Energia & Utilities</h4>
-                    <p>Monitoramento, manutenção e faturamento</p>
-                </div>
-                
-                <div class="sector-card fade-in stagger-delay-1">
-                    <div class="sector-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h4>Transporte & Mobilidade</h4>
-                    <p>Gestão de frotas, manutenção e rotas</p>
-                </div>
-                
-                <div class="sector-card fade-in stagger-delay-2">
-                    <div class="sector-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h4>Serviços Corporativos</h4>
-                    <p>RH, Financeiro, Compras e Suprimentos</p>
+                    <p style="font-size: 0.9rem; margin-top: 5px;">Gestão de projetos, horas e clientes</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos -->
+    <!-- Projetos com correção de vídeos -->
     <section id="projetos">
         <div class="container">
             <div class="section-title">
@@ -854,16 +859,19 @@
             </div>
             
             <div class="projects-grid">
+                <!-- Projeto 1 - Correção do nome do arquivo -->
                 <div class="project-card fade-in">
                     <div class="project-video-container">
-                        <video class="project-video" controls>
+                        <video class="project-video" controls poster="https://via.placeholder.com/350x250/1a2238/22c55e?text=App+Compras">
+                            <source src="videos/app_compras_app.mp4" type="video/mp4">
                             <source src="assets/videos/app_compras_app.mp4" type="video/mp4">
+                            <source src="./app_compras_app.mp4" type="video/mp4">
                             Seu navegador não suporta a tag de vídeo.
                         </video>
                         <div class="video-placeholder" id="placeholder1">
                             <i class="fas fa-shopping-cart"></i>
                             <p>Demo: Aplicativo de Compras</p>
-                            <p style="font-size: 0.8rem;">(Vídeo carregará automaticamente)</p>
+                            <p style="font-size: 0.8rem;">Clique para carregar o vídeo</p>
                         </div>
                     </div>
                     <div class="project-content">
@@ -874,16 +882,19 @@
                     </div>
                 </div>
                 
+                <!-- Projeto 2 - Correção do nome do arquivo -->
                 <div class="project-card fade-in stagger-delay-1">
                     <div class="project-video-container">
-                        <video class="project-video" controls>
+                        <video class="project-video" controls poster="https://via.placeholder.com/350x250/1a2238/0ea5e9?text=Gestão+Operacional">
+                            <source src="videos/app_controle_operacional.mp4" type="video/mp4">
                             <source src="assets/videos/app_controle_operacional.mp4" type="video/mp4">
+                            <source src="./app_controle_operacional.mp4" type="video/mp4">
                             Seu navegador não suporta a tag de vídeo.
                         </video>
                         <div class="video-placeholder" id="placeholder2">
                             <i class="fas fa-chart-bar"></i>
                             <p>Demo: Gestão Operacional</p>
-                            <p style="font-size: 0.8rem;">(Clique para carregar o vídeo)</p>
+                            <p style="font-size: 0.8rem;">Clique para carregar o vídeo</p>
                         </div>
                     </div>
                     <div class="project-content">
@@ -894,16 +905,19 @@
                     </div>
                 </div>
                 
+                <!-- Projeto 3 - Correção do nome do arquivo -->
                 <div class="project-card fade-in stagger-delay-2">
                     <div class="project-video-container">
-                        <video class="project-video" controls>
+                        <video class="project-video" controls poster="https://via.placeholder.com/350x250/1a2238/8b5cf6?text=GED+Contratos">
+                            <source src="videos/ged_contratos.mp4" type="video/mp4">
                             <source src="assets/videos/ged_contratos.mp4" type="video/mp4">
+                            <source src="./ged_contratos.mp4" type="video/mp4">
                             Seu navegador não suporta a tag de vídeo.
                         </video>
                         <div class="video-placeholder" id="placeholder3">
                             <i class="fas fa-file-contract"></i>
                             <p>Demo: GED - Contratos</p>
-                            <p style="font-size: 0.8rem;">(Vídeo disponível sob demanda)</p>
+                            <p style="font-size: 0.8rem;">Clique para carregar o vídeo</p>
                         </div>
                     </div>
                     <div class="project-content">
@@ -932,7 +946,9 @@
                     </a>
                 </div>
                 <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary);">
-                    <i class="fas fa-clock"></i> Resposta em até 24h úteis | <i class="fas fa-certificate"></i> Especialista com 6+ anos
+                    <i class="fas fa-clock"></i> Resposta em até 24h úteis | 
+                    <i class="fas fa-globe-americas"></i> Atendimento Nacional e Internacional | 
+                    <i class="fas fa-certificate"></i> Especialista com 6+ anos
                 </p>
             </div>
         </div>
@@ -963,8 +979,14 @@
             </div>
             
             <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> leonardo.zanre@logicbin.com.br</p>
-                <p><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil | Atendimento Nacional</p>
+                <p>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:leonardo.zanre@logicbin.com.br">leonardo.zanre@logicbin.com.br</a>
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> São Paulo, Brasil | 
+                    <i class="fas fa-globe-americas"></i> Atendimento Nacional e Internacional
+                </p>
             </div>
             
             <div class="copyright">
@@ -1048,6 +1070,25 @@
                     // Tenta carregar o vídeo
                     video.load();
                 });
+                
+                // Adiciona interatividade aos placeholders
+                document.querySelectorAll('.video-placeholder').forEach(placeholder => {
+                    placeholder.addEventListener('click', function() {
+                        const video = this.parentElement.querySelector('video');
+                        if(video) {
+                            // Tenta carregar o vídeo quando clica no placeholder
+                            video.load();
+                            video.play().catch(e => {
+                                this.innerHTML = `
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Vídeo não disponível</p>
+                                    <p style="font-size: 0.8rem;">Entre em contato para ver a demonstração</p>
+                                    <a href="#contato" style="margin-top: 10px; color: var(--accent-primary); text-decoration: underline;">Solicitar Demo</a>
+                                `;
+                            });
+                        }
+                    });
+                });
             }, 1000);
         });
 
@@ -1064,6 +1105,15 @@
                 setTimeout(() => {
                     observer.observe(el);
                 }, index * 100);
+            });
+        });
+
+        // Adiciona cursor pointer a todos os elementos clicáveis
+        document.addEventListener('DOMContentLoaded', function() {
+            const clickableElements = document.querySelectorAll('.btn, .stat-card, .card, .tech-card, .sector-card, .project-card, .social-link, .tech-tag');
+            
+            clickableElements.forEach(el => {
+                el.style.cursor = 'pointer';
             });
         });
     </script>
