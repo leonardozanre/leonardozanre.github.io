@@ -1,6 +1,6 @@
-# 🚀 Portfolio | Leonardo Zanré
+# 🚀 Power Platform Portfolio | Leonardo Zanré
 
-Especialista em **Microsoft Power Platform** com **mais de 6 anos de experiência prática**, atuando em praticamente **todas as frentes que mais geram valor e vendas** dentro do ecossistema **Microsoft**.
+Especialista em **Microsoft Power Platform** com **mais de 6 anos de experiência prática**, atuando em praticamente **todas as frentes que mais geram valor e vendas** dentro do ecossistema Microsoft.
 
 Este repositório apresenta projetos reais, arquiteturas, automações e aplicações corporativas desenvolvidas para empresas de diferentes portes e segmentos, com foco em **eficiência operacional, automação de processos, governança e escalabilidade**.
 
@@ -8,75 +8,77 @@ Este repositório apresenta projetos reais, arquiteturas, automações e aplica�
 
 ## 👨‍💻 Sobre mim
 
-Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Microsoft Power Platform**, com atuação contínua desde **2019** e **empresa própria desde 2021**.
+Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Power Platform**, com atuação contínua desde **2018** e **empresa própria desde 2021**.
 
-Ao longo da minha carreira, atuei em projetos que envolvem desde **apps simples de produtividade** até **soluções corporativas complexas**, integrando múltiplos sistemas, conectores premium e grandes volumes de dados.
-
-Tenho experiência tanto **técnica** quanto **estratégica**, participando de:
+Atuo desde a concepção da solução até a entrega final, incluindo:
 - Levantamento de requisitos
 - Desenho de arquitetura
 - Desenvolvimento
-- Governança
-- Treinamentos e mentorias
-- Pré-vendas e apresentações técnicas
+- Governança e performance
+- Treinamentos, mentorias e pré-vendas técnicas
+
+Tenho forte experiência prática em **ambientes corporativos reais**, lidando com limitações, segurança, delegação e integração entre sistemas.
 
 ---
 
 ## 🏢 Empresa
 
 **LogicBin**  
-Fundada em **2021**, focada em:
-- Consultoria em **Microsoft Power Platform**
+Fundada em **2021**, com foco em:
+- Consultoria especializada em Power Platform
 - Automação de processos empresariais
 - Desenvolvimento de aplicativos corporativos
 - Dashboards e análise de dados
-- Treinamentos técnicos e mentorias
+- Treinamentos técnicos e capacitação de equipes
 
 ---
 
-## 🎓 Treinamentos e Mentorias
+## 🎓 Treinamentos, Mentorias e Conteúdo
 
-Atuo como **instrutor e mentor desde 2021**, com experiência em:
-- Treinamentos corporativos online e presencial
-- Turmas abertas
-- Mentorias individuais e em grupo
+Atuo como **instrutor e mentor desde 2021**, formando profissionais e equipes em Power Platform.
 
-### 🤝 Parcerias
+### 🤝 Parcerias em Treinamentos
 - **KA Solutions**
 - **Impacta**
 
-Ministrando treinamentos e capacitações em:
-- Microsoft Power Apps Canvas
-- Microsoft Power Automate Online
-- Sharepoint Online
-- Boas práticas, arquitetura e governança em Microsoft Power Platform
+### 📚 Curso Online (Udemy)
+- **Desvendando a Power Platform – do Básico ao Avançado**  
+  👉 https://www.udemy.com/course/desvendando-a-power-plaform-do-basico-ao-avancado/
+
+### ▶️ Canal no YouTube
+Conteúdo técnico sobre Power Apps, Power Automate, Power BI, arquitetura, boas práticas e cenários reais de projeto:
+- https://www.youtube.com/@leonardozanre-logicbin
+
+### 📸 Instagram
+Bastidores de projetos, dicas rápidas, automações e soluções reais:
+- https://www.instagram.com/logicbinofficial/
 
 ---
 
-## 🧠 Principais Especialidades (o que mais vende)
+## 🧠 Principais Especialidades (o que mais gera valor)
 
-✔ Automação de processos manuais  
-✔ Substituição de Microsoft Excel por aplicações corporativas  
+✔ Automação de processos manuais e repetitivos  
+✔ Substituição de Excel por aplicações corporativas  
 ✔ Integração entre sistemas (ERP, CRM, APIs)  
 ✔ Gestão de dados e documentos  
 ✔ Dashboards operacionais e gerenciais  
 ✔ Controle de acessos, perfis e permissões  
-✔ Escalabilidade e governança em Power Platform  
+✔ Arquitetura escalável e governança em Power Platform  
 
 ---
 
 ## 🧩 Tecnologias & Ferramentas
 
 ### 🔷 Power Platform
-- Microsoft Power Apps (Canvas Apps)
-- Microsoft Power Automate Cloud
-- Microsoft Power Automate Desktop (RPA)
-- Microsoft Power BI
+- Power Apps (Canvas Apps)
+- Power Automate Cloud
+- Power Automate Desktop (RPA)
+- Power BI
 - Dataverse
 - AI Builder
 - Copilot Studio
 
-### 🔷 Integrações Microsoft 365
+### 🔷 Microsoft 365 & Integrações
 - SharePoint Online
 - Microsoft Forms
 - Outlook
@@ -84,49 +86,48 @@ Ministrando treinamentos e capacitações em:
 - Planner
 - OneDrive
 
-### 🔷 Conectores Premium & Integrações
+### 🔷 Conectores Premium & Integrações Avançadas
 - SQL Server
-- PDF (leitura, escrita, conversão e merge)
-- Conectores premium customizados
+- Manipulação de PDF (leitura, escrita, conversão e merge)
+- Conectores premium e customizados
 - APIs REST / HTTP
 - Conversões de arquivos
-- Processamento de documentos
+- Processamento automático de documentos
 
 ### 🔷 Outros Conhecimentos
 - JSON e manipulação de dados
+- Performance e delegação
 - Controle de versões e ambientes
-- Boas práticas de performance e delegação
 - Arquitetura de soluções corporativas
-- Segurança e controle de acesso
+- Segurança, governança e controle de acesso
 
 ---
 
 ## 🚀 Projetos
 
-Neste repositório você encontrará exemplos de:
-
-- Aplicativos corporativos em Power Apps
-- Automações completas com Power Automate
-- Integrações entre sistemas externos
+Este repositório contém exemplos de:
+- Aplicativos corporativos desenvolvidos em Power Apps
+- Automações completas com Power Automate (Cloud e Desktop)
+- Integrações com sistemas externos e conectores premium
 - Soluções com SharePoint e Dataverse
-- Aplicações focadas em produtividade e gestão
-- Dashboards e visualizações estratégicas
+- Aplicações voltadas para produtividade, controle e gestão
+- Dashboards estratégicos e operacionais
 
-Cada projeto possui:
+Cada projeto apresenta:
 - Contexto de negócio
-- Objetivo
-- Arquitetura
-- Tecnologias utilizadas
+- Objetivo da solução
+- Arquitetura utilizada
+- Tecnologias aplicadas
 - Demonstrações (vídeos ou imagens)
 
 ---
 
 ## 💼 Como posso ajudar sua empresa
 
-- ✔ Desenvolvimento de aplicativos sob medida
-- ✔ Automação de processos manuais e repetitivos
+- ✔ Desenvolvimento de soluções sob medida
+- ✔ Automação de processos e tarefas manuais
 - ✔ Consultoria e arquitetura em Power Platform
-- ✔ Treinamentos e capacitação de times
+- ✔ Treinamento e capacitação de equipes
 - ✔ Mentorias técnicas
 - ✔ Apoio em pré-vendas e provas de conceito (POC)
 
@@ -139,4 +140,4 @@ Cada projeto possui:
 
 ---
 
-> *Este portfólio representa projetos reais, experiências práticas e soluções aplicadas em ambientes corporativos.*
+> *Este portfólio representa experiências reais, projetos aplicados e conhecimento consolidado em ambientes corporativos.*
