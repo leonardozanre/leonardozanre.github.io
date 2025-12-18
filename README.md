@@ -1,6 +1,6 @@
-# 🚀 Power Platform Portfolio | Leonardo Zanré
+# 🚀 Portfolio | Leonardo Zanré
 
-Especialista em **Microsoft Power Platform** com **mais de 6 anos de experiência prática**, atuando em praticamente **todas as frentes que mais geram valor e vendas** dentro do ecossistema Microsoft.
+Especialista em **Microsoft Power Platform** com **mais de 6 anos de experiência prática**, atuando em praticamente **todas as frentes que mais geram valor e vendas** dentro do ecossistema **Microsoft**.
 
 Este repositório apresenta projetos reais, arquiteturas, automações e aplicações corporativas desenvolvidas para empresas de diferentes portes e segmentos, com foco em **eficiência operacional, automação de processos, governança e escalabilidade**.
 
@@ -8,7 +8,7 @@ Este repositório apresenta projetos reais, arquiteturas, automações e aplica�
 
 ## 👨‍💻 Sobre mim
 
-Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Power Platform**, com atuação contínua desde **2018** e **empresa própria desde 2021**.
+Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Microsoft Power Platform**, com atuação contínua desde **2019** e **empresa própria desde 2021**.
 
 Ao longo da minha carreira, atuei em projetos que envolvem desde **apps simples de produtividade** até **soluções corporativas complexas**, integrando múltiplos sistemas, conectores premium e grandes volumes de dados.
 
@@ -26,7 +26,7 @@ Tenho experiência tanto **técnica** quanto **estratégica**, participando de:
 
 **LogicBin**  
 Fundada em **2021**, focada em:
-- Consultoria em Power Platform
+- Consultoria em **Microsoft Power Platform**
 - Automação de processos empresariais
 - Desenvolvimento de aplicativos corporativos
 - Dashboards e análise de dados
@@ -37,7 +37,7 @@ Fundada em **2021**, focada em:
 ## 🎓 Treinamentos e Mentorias
 
 Atuo como **instrutor e mentor desde 2021**, com experiência em:
-- Treinamentos corporativos
+- Treinamentos corporativos online e presencial
 - Turmas abertas
 - Mentorias individuais e em grupo
 
@@ -46,17 +46,17 @@ Atuo como **instrutor e mentor desde 2021**, com experiência em:
 - **Impacta**
 
 Ministrando treinamentos e capacitações em:
-- Power Apps
-- Power Automate
-- Power BI
-- Boas práticas, arquitetura e governança em Power Platform
+- Microsoft Power Apps Canvas
+- Microsoft Power Automate Online
+- Sharepoint Online
+- Boas práticas, arquitetura e governança em Microsoft Power Platform
 
 ---
 
 ## 🧠 Principais Especialidades (o que mais vende)
 
 ✔ Automação de processos manuais  
-✔ Substituição de Excel por aplicações corporativas  
+✔ Substituição de Microsoft Excel por aplicações corporativas  
 ✔ Integração entre sistemas (ERP, CRM, APIs)  
 ✔ Gestão de dados e documentos  
 ✔ Dashboards operacionais e gerenciais  
@@ -68,10 +68,10 @@ Ministrando treinamentos e capacitações em:
 ## 🧩 Tecnologias & Ferramentas
 
 ### 🔷 Power Platform
-- Power Apps (Canvas Apps)
-- Power Automate Cloud
-- Power Automate Desktop (RPA)
-- Power BI
+- Microsoft Power Apps (Canvas Apps)
+- Microsoft Power Automate Cloud
+- Microsoft Power Automate Desktop (RPA)
+- Microsoft Power BI
 - Dataverse
 - AI Builder
 - Copilot Studio
