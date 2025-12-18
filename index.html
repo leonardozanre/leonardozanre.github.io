@@ -1,296 +1,353 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leonardo Zanré | Power Platform Specialist</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Zanré | Power Platform Specialist</title>
 
-  <meta name="description" content="Especialista em Power Platform com mais de 6 anos de experiência. Automação de processos, Power Apps, Power Automate, Power BI e treinamentos corporativos.">
+<meta name="description" content="Especialista em Power Platform com mais de 6 anos de experiência. Power Apps, Power Automate, Power BI, Dataverse, AI Builder, Copilot e automações corporativas.">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      color: #1f2937;
-      background: #f9fafb;
-      line-height: 1.6;
-    }
+<style>
+:root {
+  --bg: #0b0f0e;
+  --bg-card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #22c55e; /* verde */
+  --border: #1f2937;
+}
 
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    h1, h2, h3 {
-      line-height: 1.2;
-    }
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #0366d6, #0a4aa8);
-      color: white;
-    }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-    }
+h1, h2, h3 {
+  line-height: 1.2;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: auto;
-    }
+/* HERO */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #16a34a30, transparent 60%);
+}
 
-    .hero-actions {
-      margin-top: 30px;
-    }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 26px;
-      border-radius: 8px;
-      margin: 5px;
-      font-weight: 600;
-    }
+.hero p {
+  max-width: 900px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
 
-    .btn.primary {
-      background: white;
-      color: #0366d6;
-    }
+.hero-actions {
+  margin-top: 35px;
+}
 
-    .btn.secondary {
-      border: 2px solid white;
-      color: white;
-    }
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 5px;
+  display: inline-block;
+}
 
-    /* TRUST */
-    .trust {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      text-align: center;
-      margin-top: -40px;
-    }
+.btn.primary {
+  background: var(--primary);
+  color: #052e16;
+}
 
-    .trust-item {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+.btn.secondary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
 
-    .trust-item strong {
-      font-size: 1.8rem;
-      display: block;
-      color: #0366d6;
-    }
+/* TRUST */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: -40px;
+}
 
-    /* SECTIONS */
-    section {
-      margin-top: 80px;
-    }
+.trust-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+}
 
-    /* SERVICES */
-    .services ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-    }
+.trust-item strong {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--primary);
+}
 
-    .services li {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
+/* SECTIONS */
+section {
+  margin-top: 90px;
+}
 
-    /* TECH */
-    .tech p {
-      background: white;
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
+/* SERVICES */
+.services ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
 
-    /* PROJECTS */
-    .projects article {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+.services li {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 12px;
+}
 
-    video {
-      width: 100%;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
+/* TECH */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
 
-    /* CONTENT */
-    .content ul {
-      list-style: none;
-      padding: 0;
-    }
+.tech-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 12px;
+}
 
-    .content li {
-      margin-bottom: 10px;
-    }
+/* SECTORS */
+.sectors ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
 
-    /* CTA */
-    .cta {
-      background: #111827;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      border-radius: 20px;
-    }
+.sectors li {
+  background: #052e1620;
+  border: 1px solid #14532d;
+  padding: 14px 18px;
+  border-radius: 10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      color: #6b7280;
-    }
-  </style>
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  gap: 50px;
+}
+
+.project {
+  background: linear-gradient(180deg, #111827, #020617);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.project h3 {
+  color: var(--primary);
+}
+
+.project video {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+}
+
+/* CONTENT */
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content li {
+  margin-bottom: 12px;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #052e16, #020617);
+  border-radius: 20px;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--muted);
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Especialista em Microsoft Power Platform</h1>
-    <p>
-      Mais de <strong>6 anos de experiência</strong> criando soluções reais
-      com Power Apps, Power Automate, Power BI, integrações corporativas
-      e automação de processos.
-    </p>
+<!-- HERO -->
+<section class="hero">
+  <h1>Power Platform Specialist</h1>
+  <p>
+    Mais de <strong>6 anos de experiência</strong> criando soluções corporativas
+    com Power Apps, Power Automate, Power BI, Dataverse, AI Builder, Copilot
+    e integrações avançadas em empresas de diversos tamanhos e segmentos.
+  </p>
 
-    <div class="hero-actions">
-      <a href="#projetos" class="btn primary">Ver projetos</a>
-      <a href="#contato" class="btn secondary">Falar comigo</a>
+  <div class="hero-actions">
+    <a href="#projetos" class="btn primary">Ver projetos</a>
+    <a href="#contato" class="btn secondary">Entrar em contato</a>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-item"><strong>6+ anos</strong>Power Platform</div>
+  <div class="trust-item"><strong>Empresa desde 2021</strong>LogicBin</div>
+  <div class="trust-item"><strong>Instrutor</strong>KA Solutions & Impacta</div>
+  <div class="trust-item"><strong>Projetos reais</strong>Vários segmentos</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>O que eu entrego</h2>
+  <ul>
+    <li>Automação de processos corporativos</li>
+    <li>Aplicativos empresariais em Power Apps</li>
+    <li>RPA com Power Automate Desktop</li>
+    <li>Integrações com ERP, SQL e APIs</li>
+    <li>Dashboards e indicadores em Power BI</li>
+    <li>Consultoria, governança e arquitetura</li>
+    <li>Treinamentos e mentorias técnicas</li>
+  </ul>
+</section>
+
+<!-- TECH -->
+<section class="tech">
+  <h2>Tecnologias</h2>
+  <div class="tech-grid">
+    <div class="tech-box">
+      <strong>Power Platform</strong><br>
+      Power Apps · Power Automate · Power Automate Desktop · Power BI · Dataverse · AI Builder · Copilot Studio
     </div>
-  </section>
+    <div class="tech-box">
+      <strong>Microsoft 365</strong><br>
+      SharePoint · Teams · Outlook · Forms · Planner · OneDrive
+    </div>
+    <div class="tech-box">
+      <strong>Integrações Premium</strong><br>
+      SQL Server · PDFs · HTTP · APIs REST · Conversões · Conectores customizados
+    </div>
+    <div class="tech-box">
+      <strong>Outros</strong><br>
+      JSON · Segurança · Perfis de acesso · Performance · Governança · Ambientes
+    </div>
+  </div>
+</section>
 
-  <div class="container">
+<!-- SECTORS -->
+<section class="sectors">
+  <h2>Segmentos atendidos</h2>
+  <ul>
+    <li>Indústria</li>
+    <li>Farmacêutico</li>
+    <li>Financeiro</li>
+    <li>Varejo</li>
+    <li>Logística</li>
+    <li>Saúde</li>
+    <li>Educação</li>
+    <li>Consultorias</li>
+    <li>Serviços corporativos</li>
+    <li>Operações internas</li>
+    <li>Compras & Suprimentos</li>
+    <li>Financeiro & Controladoria</li>
+  </ul>
+</section>
 
-    <!-- TRUST -->
-    <section class="trust">
-      <div class="trust-item">
-        <strong>6+ anos</strong>
-        Power Platform
-      </div>
-      <div class="trust-item">
-        <strong>Desde 2021</strong>
-        Empresa própria (LogicBin)
-      </div>
-      <div class="trust-item">
-        <strong>Instrutor</strong>
-        KA Solutions & Impacta
-      </div>
-    </section>
+<!-- PROJECTS -->
+<section id="projetos">
+  <h2>Projetos em destaque</h2>
 
-    <!-- SERVICES -->
-    <section class="services">
-      <h2>O que eu faço</h2>
-      <ul>
-        <li>Automação de processos manuais e repetitivos</li>
-        <li>Aplicativos corporativos em Power Apps</li>
-        <li>Integração com ERPs, APIs e SQL</li>
-        <li>Dashboards e análises em Power BI</li>
-        <li>Consultoria, arquitetura e governança</li>
-        <li>Treinamentos e mentorias em Power Platform</li>
-      </ul>
-    </section>
+  <div class="projects-grid">
 
-    <!-- TECH -->
-    <section class="tech">
-      <h2>Tecnologias</h2>
-      <p><strong>Power Platform:</strong> Power Apps, Power Automate (Cloud & Desktop), Power BI, Dataverse, AI Builder, Copilot</p>
-      <p><strong>Microsoft 365:</strong> SharePoint, Teams, Outlook, Forms, Planner, OneDrive</p>
-      <p><strong>Integrações Premium:</strong> SQL Server, PDFs, APIs REST, HTTP, conectores premium</p>
-    </section>
+    <div class="project">
+      <h3>Aplicativo de Lista de Compras</h3>
+      <video controls>
+        <source src="assets/videos/app_compras_app.mp4" type="video/mp4">
+      </video>
+      <p>Substituição de controles manuais por aplicativo corporativo integrado.</p>
+    </div>
 
-    <!-- PROJECTS -->
-    <section id="projetos" class="projects">
-      <h2>Projetos em Destaque</h2>
+    <div class="project">
+      <h3>Gestão Operacional</h3>
+      <video controls>
+        <source src="assets/videos/app_controle_operacional.mp4" type="video/mp4">
+      </video>
+      <p>Gestão de processos, indicadores e automações operacionais.</p>
+    </div>
 
-      <article>
-        <h3>Aplicativo de Lista de Compras</h3>
-        <video controls>
-          <source src="assets/videos/app_compras_app.mp4" type="video/mp4">
-        </video>
-        <p>
-          Aplicativo desenvolvido em Power Apps para substituir controles manuais
-          e centralizar solicitações de compras com automações e histórico.
-        </p>
-        <p><strong>Tecnologias:</strong> Power Apps, Power Automate, SharePoint</p>
-      </article>
-
-      <article>
-        <h3>Aplicativo de Gestão Operacional</h3>
-        <video controls>
-          <source src="assets/videos/app_controle_operacional.mp4" type="video/mp4">
-        </video>
-        <p>
-          Aplicação corporativa para controle operacional, indicadores,
-          filtros avançados e gestão de processos internos.
-        </p>
-        <p><strong>Tecnologias:</strong> Power Apps, Power Automate, SharePoint</p>
-      </article>
-
-      <article>
-        <h3>GED – Gestão Eletrônica de Contratos</h3>
-        <video controls>
-          <source src="assets/videos/ged_contratos.mp4" type="video/mp4">
-        </video>
-        <p>
-          Solução completa de gestão documental com upload, versionamento,
-          controle de acesso, automações e integração com processos internos.
-        </p>
-        <p><strong>Tecnologias:</strong> Power Apps, Power Automate, SharePoint, PDFs</p>
-      </article>
-    </section>
-
-    <!-- CONTENT -->
-    <section class="content">
-      <h2>Conteúdo e Educação</h2>
-      <ul>
-        <li>▶️ YouTube: <a href="https://www.youtube.com/@leonardozanre-logicbin" target="_blank">Canal Técnico Power Platform</a></li>
-        <li>📚 Udemy: <a href="https://www.udemy.com/course/desvendando-a-power-plaform-do-basico-ao-avancado/" target="_blank">Curso do Básico ao Avançado</a></li>
-        <li>📸 Instagram: <a href="https://www.instagram.com/logicbinofficial/" target="_blank">@logicbinofficial</a></li>
-      </ul>
-    </section>
-
-    <!-- CTA -->
-    <section id="contato" class="cta">
-      <h2>Vamos conversar?</h2>
-      <p>
-        Se você precisa automatizar processos, criar aplicativos corporativos
-        ou capacitar seu time em Power Platform, entre em contato.
-      </p>
-      <p>
-        📧 <a href="mailto:leonardo.zanre@logicbin.com.br" style="color:#60a5fa;">
-          leonardo.zanre@logicbin.com.br
-        </a>
-      </p>
-    </section>
+    <div class="project">
+      <h3>GED – Gestão Eletrônica de Contratos</h3>
+      <video controls>
+        <source src="assets/videos/ged_contratos.mp4" type="video/mp4">
+      </video>
+      <p>Gestão documental completa com versionamento e automações.</p>
+    </div>
 
   </div>
+</section>
 
-  <footer>
-    © Leonardo Zanré | LogicBin
-  </footer>
+<!-- CONTENT -->
+<section class="content">
+  <h2>Conteúdo & Comunidade</h2>
+  <ul>
+    <li>▶️ YouTube: <a href="https://www.youtube.com/@leonardozanre-logicbin" target="_blank">Canal Técnico</a></li>
+    <li>📚 Udemy: <a href="https://www.udemy.com/course/desvendando-a-power-plaform-do-basico-ao-avancado/" target="_blank">Curso Completo</a></li>
+    <li>📸 Instagram: <a href="https://www.instagram.com/logicbinofficial/" target="_blank">@logicbinofficial</a></li>
+    <li>💬 Telegram: <a href="https://t.me/powerplatformlogicbin" target="_blank">Canal Gratuito</a></li>
+    <li>🌐 Site: <a href="https://logicbin.com.br/" target="_blank">logicbin.com.br</a></li>
+  </ul>
+</section>
+
+<!-- CTA -->
+<section id="contato" class="cta">
+  <h2>Vamos conversar?</h2>
+  <p>Automação, apps corporativos ou treinamento em Power Platform.</p>
+  <p>📧 <a href="mailto:leonardo.zanre@logicbin.com.br">leonardo.zanre@logicbin.com.br</a></p>
+</section>
+
+</div>
+
+<footer>
+  © Leonardo Zanré | LogicBin
+</footer>
 
 </body>
 </html>
