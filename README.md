@@ -8,7 +8,7 @@ Este repositório apresenta projetos reais, arquiteturas, automações e aplica�
 
 ## 👨‍💻 Sobre mim
 
-Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Power Platform**, com atuação contínua desde **2018** e **empresa própria desde 2021**.
+Sou **Leonardo Zanré**, desenvolvedor, arquiteto e consultor especializado em **Power Platform**, com atuação contínua desde **2019** e **empresa própria desde 2021**.
 
 Atuo desde a concepção da solução até a entrega final, incluindo:
 - Levantamento de requisitos
