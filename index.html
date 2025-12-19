@@ -1,20 +1,1286 @@
-<!-- ADICIONAR NOVO VÍDEO -->
-<div class="video-card fade-in">
-    <div class="video-thumbnail">
-        <img src="caminho/thumbnail.jpg" alt="Descrição">
-        <div class="video-play-btn">
-            <i class="fas fa-play"></i>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Zanré | Portfólio Power Platform - Projetos Completos</title>
+    <meta name="description" content="Portfólio completo de projetos Power Platform: Power Apps, Power Automate, Power BI, SharePoint, OneDrive. +50 projetos em 15+ segmentos.">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== VARIÁVEIS ===== */
+        :root {
+            /* Cores - Tema Preto & Verde */
+            --black: #000000;
+            --black-light: #0a0a0a;
+            --black-card: #111111;
+            --green-primary: #00ff88;
+            --green-secondary: #00cc6a;
+            --green-dark: #00994d;
+            --green-glow: rgba(0, 255, 136, 0.2);
+            --white: #ffffff;
+            --gray: #888888;
+            --gray-light: #444444;
+            --gray-dark: #222222;
+            
+            /* Efeitos */
+            --gradient-green: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+            --gradient-black: linear-gradient(135deg, var(--black), var(--black-light));
+            --shadow-green: 0 0 30px var(--green-glow);
+            --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--gradient-green);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-green);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--green-primary);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .highlight {
+            color: var(--green-primary);
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* ===== HEADER ===== */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-dark);
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--green-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--green-primary);
+            color: var(--black);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background: var(--gradient-black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--green-glow) 0%, transparent 70%);
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--green-primary);
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== BOTÕES ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-green);
+            color: var(--black);
+            box-shadow: var(--shadow-green);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--green-primary);
+            border: 2px solid var(--green-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--green-primary);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        /* ===== CARDS ===== */
+        .card {
+            background: var(--black-card);
+            border: 1px solid var(--gray-dark);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--green-primary);
+            box-shadow: var(--shadow-card);
+        }
+
+        .card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-green);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .card:hover:before {
+            opacity: 1;
+        }
+
+        /* ===== SEÇÃO TECNOLOGIAS ===== */
+        .tech-section {
+            background: var(--black-light);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-category {
+            background: var(--black-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--gray-dark);
+        }
+
+        .tech-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            color: var(--green-primary);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--green-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            transition: var(--transition);
+        }
+
+        .tech-tag:hover {
+            background: rgba(0, 255, 136, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* ===== SEÇÃO SEGMENTOS ===== */
+        .segments-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .segments-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
+        }
+
+        .segments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .segment-item {
+            background: var(--black-card);
+            border: 1px solid var(--gray-dark);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .segment-item:hover {
+            border-color: var(--green-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        .segment-icon {
+            font-size: 2rem;
+            color: var(--green-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* ===== GALERIA DE PROJETOS ===== */
+        .portfolio-section {
+            background: var(--black-light);
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--black-card);
+            color: var(--white);
+            border: 1px solid var(--gray-dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--green-primary);
+            color: var(--black);
+            border-color: var(--green-primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--black-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--gray-dark);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--green-primary);
+            box-shadow: var(--shadow-card);
+        }
+
+        .project-media {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-video {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--green-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 1.5rem;
+            transform: scale(0.8);
+            transition: var(--transition);
+        }
+
+        .project-card:hover .play-btn {
+            transform: scale(1);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        /* ===== FLUXOS & PROCESSOS ===== */
+        .workflow-section {
+            position: relative;
+        }
+
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .workflow-step {
+            background: var(--black-card);
+            border: 1px solid var(--gray-dark);
+            border-radius: var(--radius);
+            padding: 2rem;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .workflow-step:hover {
+            border-color: var(--green-primary);
+            transform: translateX(10px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--black);
+            font-size: 1.2rem;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--gradient-black);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--black-card);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--gray-dark);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--green-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-list i {
+            color: var(--green-primary);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--black);
+            border: 1px solid var(--gray-dark);
+            color: var(--green-primary);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--green-primary);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-dark);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding-top: 120px;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .segments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+
+        /* ===== ANIMAÇÕES ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">POWER PORTFOLIO</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#portfolio" class="active">Portfólio</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#segmentos">Segmentos</a></li>
+                    <li><a href="#fluxos">Fluxos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div class="video-content">
-        <h3>Título do Projeto</h3>
-        <p>Descrição breve do projeto.</p>
-        <div class="video-tech">
-            <span class="tech-tag">Tecnologia 1</span>
-            <span class="tech-tag">Tecnologia 2</span>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>PORTFÓLIO COMPLETO<br>POWER PLATFORM</h1>
+                <p style="font-size: 1.2rem; color: var(--gray); max-width: 600px;">
+                    Coleção de <span class="highlight">+50 projetos reais</span> desenvolvidos com 
+                    <span class="highlight">Power Apps, Power Automate, Power BI, SharePoint</span> e toda suíte Microsoft.
+                    Resultados comprovados em <span class="highlight">15+ segmentos</span> diferentes.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projetos Entregues</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Segmentos Atendidos</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Foco em Resultados</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a href="caminho/video.mp4" class="btn btn-primary" data-lightbox="video-gallery">
-            <i class="fas fa-play"></i> Assistir Demo
-        </a>
-    </div>
-</div>
+    </section>
+
+    <!-- Portfólio de Projetos -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="fade-in">Projetos em Destaque</h2>
+            <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
+                Seleção de projetos reais implementados para diferentes necessidades empresariais.
+                Cada solução foi desenvolvida com foco em resultados mensuráveis.
+            </p>
+            
+            <div class="portfolio-filters fade-in">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="power-apps">Power Apps</button>
+                <button class="filter-btn" data-filter="power-bi">Power BI</button>
+                <button class="filter-btn" data-filter="automate">Power Automate</button>
+                <button class="filter-btn" data-filter="sharepoint">SharePoint</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card fade-in" data-category="power-apps automate">
+                    <div class="project-media">
+                        <video class="project-video" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="videos/app_compras_app.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de Compras Automatizado</h3>
+                        <p>Aplicação completa para gestão de processos de compras com aprovações automatizadas e integração com fornecedores.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">Dataverse</span>
+                            <span class="tech-tag">SharePoint</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Redução de 70% no tempo de processamento</p>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-card fade-in" data-category="power-bi sharepoint">
+                    <div class="project-media">
+                        <video class="project-video" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="videos/app_controle_operacional.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Operacional</h3>
+                        <p>Painel em tempo real com monitoramento de operações, KPIs automatizados e alertas proativos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">Power Automate</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Aumento de 40% na produtividade</p>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-card fade-in" data-category="power-apps sharepoint">
+                    <div class="project-media">
+                        <video class="project-video" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="videos/ged_contratos.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>GED - Gestão de Contratos</h3>
+                        <p>Sistema de gestão eletrônica de documentos com OCR, versionamento automático e busca inteligente.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">AI Builder</span>
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">OneDrive</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Redução de 85% no tempo de busca</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologias Dominadas -->
+    <section id="tecnologias" class="tech-section">
+        <div class="container">
+            <h2 class="fade-in">Tecnologias Dominadas</h2>
+            <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
+                Expertise completa em toda a suíte Microsoft Power Platform e tecnologias complementares.
+            </p>
+            
+            <div class="tech-grid">
+                <!-- Power Platform -->
+                <div class="tech-category fade-in">
+                    <div class="tech-header">
+                        <div class="tech-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Power Platform</h3>
+                    </div>
+                    <p>Domínio completo de toda a suíte para desenvolvimento de soluções corporativas.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power Apps (Canvas + Model)</span>
+                        <span class="tech-tag">Power Automate (Cloud + Desktop)</span>
+                        <span class="tech-tag">Power BI (Dashboards + DAX)</span>
+                        <span class="tech-tag">Dataverse (Tables + Security)</span>
+                        <span class="tech-tag">AI Builder (Models + Custom)</span>
+                        <span class="tech-tag">Copilot Studio</span>
+                    </div>
+                </div>
+                
+                <!-- Microsoft 365 -->
+                <div class="tech-category fade-in">
+                    <div class="tech-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h3>Microsoft 365</h3>
+                    </div>
+                    <p>Integrações nativas e desenvolvimento de soluções dentro do ecossistema M365.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">SharePoint Online</span>
+                        <span class="tech-tag">Microsoft Teams</span>
+                        <span class="tech-tag">Outlook Automation</span>
+                        <span class="tech-tag">Microsoft Forms</span>
+                        <span class="tech-tag">Planner & To Do</span>
+                        <span class="tech-tag">OneDrive for Business</span>
+                    </div>
+                </div>
+                
+                <!-- Integrações -->
+                <div class="tech-category fade-in">
+                    <div class="tech-header">
+                        <div class="tech-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Integrações & Conectores</h3>
+                    </div>
+                    <p>Conexão com múltiplos sistemas e desenvolvimento de soluções híbridas.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">SQL Server (On-prem + Azure)</span>
+                        <span class="tech-tag">APIs REST / SOAP</span>
+                        <span class="tech-tag">PDF Services</span>
+                        <span class="tech-tag">Conectores Premium</span>
+                        <span class="tech-tag">Custom Connectors</span>
+                        <span class="tech-tag">HTTP / Webhooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segmentos Atendidos -->
+    <section id="segmentos" class="segments-section">
+        <div class="container">
+            <h2 class="fade-in">Segmentos com Projetos Realizados</h2>
+            <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
+                Experiência prática em diversos setores da economia, implementando soluções específicas para cada necessidade.
+            </p>
+            
+            <div class="segments-grid">
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h4>Indústria</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Controle de produção e manutenção</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h4>Farmacêutico</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Compliance e documentação</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Financeiro</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Relatórios e conciliação</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h4>Varejo</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Inventário e CRM</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Logística</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Rastreamento e supply chain</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h4>Saúde</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Gestão de pacientes</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Educação</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Gestão acadêmica</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>Consultorias</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Gestão de projetos</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h4>Jurídico</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Contratos e documentação</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4>Construção Civil</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Gestão de obras</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h4>Agronegócio</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Controle de produção</p>
+                </div>
+                
+                <div class="segment-item fade-in">
+                    <div class="segment-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Alimentos & Bebidas</h4>
+                    <p style="font-size: 0.9rem; color: var(--gray);">Controle de qualidade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fluxos e Processos -->
+    <section id="fluxos" class="workflow-section">
+        <div class="container">
+            <h2 class="fade-in">Fluxos & Processos Desenvolvidos</h2>
+            <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
+                Metodologia e abordagem para desenvolvimento de soluções completas e escaláveis.
+            </p>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Análise de Processos</h3>
+                    <p>Levantamento completo dos processos atuais, identificação de gargalos e oportunidades de automação.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Mapeamento de Processos</span>
+                        <span class="tech-tag">Análise de Dados</span>
+                        <span class="tech-tag">Identificação de Gargalos</span>
+                    </div>
+                </div>
+                
+                <div class="workflow-step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Arquitetura da Solução</h3>
+                    <p>Definição da arquitetura técnica, escolha das tecnologias e design da solução final.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power Apps Architecture</span>
+                        <span class="tech-tag">Dataverse Design</span>
+                        <span class="tech-tag">Integration Planning</span>
+                    </div>
+                </div>
+                
+                <div class="workflow-step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Desenvolvimento</h3>
+                    <p>Implementação da solução com Power Apps, Power Automate, Power BI e integrações necessárias.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power Apps Development</span>
+                        <span class="tech-tag">Power Automate Flows</span>
+                        <span class="tech-tag">Power BI Dashboards</span>
+                    </div>
+                </div>
+                
+                <div class="workflow-step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Testes & Implantação</h3>
+                    <p>Testes rigorosos, treinamento dos usuários e implantação da solução no ambiente produtivo.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">User Acceptance Testing</span>
+                        <span class="tech-tag">Training & Documentation</span>
+                        <span class="tech-tag">Production Deployment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contato" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="fade-in">Quer Ver Mais Projetos?</h2>
+                <p class="fade-in" style="max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem;">
+                    Tenho um portfólio completo com dezenas de projetos detalhados. 
+                    Vamos conversar sobre como posso ajudar sua empresa?
+                </p>
+                
+                <div class="fade-in" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:leonardo.zanre@logicbin.com.br" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Solicitar Portfólio Completo
+                    </a>
+                    <a href="https://wa.me/5511953621063" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+                    </a>
+                </div>
+                
+                <div class="fade-in" style="margin-top: 3rem; color: var(--gray);">
+                    <p>
+                        <i class="fas fa-building" style="color: var(--green-primary);"></i> 
+                        <strong>LogicBin</strong> - Empresa desde 2021 | 
+                        <i class="fas fa-graduation-cap" style="color: var(--green-primary);"></i> 
+                        Instrutor desde 2021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Portfólio Power Platform</h4>
+                    <p style="color: var(--gray);">
+                        Coleção completa de projetos desenvolvidos com Power Apps, 
+                        Power Automate, Power BI e toda suíte Microsoft.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/leonardozanre" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@leonardozanre-logicbin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/leonardozanre" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato Direto</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--gray);">leonardo.zanre@logicbin.com.br</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="https://wa.me/5511953621063" style="color: var(--gray);">(11) 95362-1063</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span style="color: var(--gray);">São Paulo, Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Tecnologias Principais</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="tech-tag" style="font-size: 0.8rem;">Power Apps</span>
+                        <span class="tech-tag" style="font-size: 0.8rem;">Power Automate</span>
+                        <span class="tech-tag" style="font-size: 0.8rem;">Power BI</span>
+                        <span class="tech-tag" style="font-size: 0.8rem;">SharePoint</span>
+                        <span class="tech-tag" style="font-size: 0.8rem;">OneDrive</span>
+                        <span class="tech-tag" style="font-size: 0.8rem;">Dataverse</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © <span id="current-year">2024</span> Leonardo Zanré | Portfólio Power Platform - Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Atualiza ano no copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Atualiza link ativo
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Filtro de projetos
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class de todos
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Adiciona active no clicado
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Animações de entrada
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observa elementos para animação
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+
+        // Controle de vídeos
+        document.querySelectorAll('.project-card').forEach(card => {
+            const video = card.querySelector('.project-video');
+            const playBtn = card.querySelector('.play-btn');
+            
+            if (video && playBtn) {
+                playBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (video.paused) {
+                        video.play();
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    } else {
+                        video.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                });
+                
+                video.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (video.paused) {
+                        video.play();
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    } else {
+                        video.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                });
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.8)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
