@@ -1,1 +1,282 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Compras | Portfólio Power Platform</title>
+    <meta name="description" content="Sistema completo de compras desenvolvido com Power Apps, Power Automate e Dataverse.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --black: #000000;
+            --black-light: #0a0a0a;
+            --black-card: #111111;
+            --green-primary: #00ff88;
+            --green-secondary: #00cc6a;
+            --white: #ffffff;
+            --gray: #888888;
+            --gray-dark: #222222;
+            
+            --gradient-green: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+            --gradient-black: linear-gradient(135deg, var(--black), var(--black-light));
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: var(--gradient-green);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--white);
+            margin: 2rem 0 1rem;
+            border-left: 4px solid var(--green-primary);
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--green-primary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .project-header {
+            background: var(--gradient-black);
+            padding: 100px 0 50px;
+            border-bottom: 1px solid var(--gray-dark);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--green-primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-item i {
+            color: var(--green-primary);
+        }
+
+        /* Conteúdo */
+        .project-content {
+            padding: 50px 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .video-container {
+            background: var(--black-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--gray-dark);
+        }
+
+        .project-video {
+            width: 100%;
+            display: block;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--green-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .info-card {
+            background: var(--black-card);
+            border: 1px solid var(--gray-dark);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .result-item {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--green-primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-green);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--green-primary);
+            border: 2px solid var(--green-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--green-primary);
+            color: var(--black);
+        }
+
+        /* Footer */
+        .project-footer {
+            background: var(--black-card);
+            padding: 3rem 0;
+            border-top: 1px solid var(--gray-dark);
+            margin-top: 4rem;
+        }
+
+        .navigation-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do Projeto -->
+    <header class="project-header">
+        <div class="container">
+            <a href="projetos.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Voltar para Todos os Projetos
+            </a>
+            
+            <h1>Sistema de Compras Automatizado</h1>
+            <p style="font-size: 1.2rem; color: var(--gray); max-width: 800px;">
+                Aplicação completa desenvolvida com Power Platform para gestão de processos de compras corporativas, 
+                desde a requisição até o pagamento, com aprovações automatizadas e integração com fornecedores.
+            </p>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2024 • Em andamento</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-industry"></i>
+                    <span>Segmento: Industrial</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Duração: 3 meses</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="project-content">
+        <div class="container">
+            <div class="project-grid">
+                <!-- Coluna Principal -->
+                <div>
+                    <h2>Demonstração do Sistema</h2>
+                    <div class="video-container">
+                        <video class="project-video" controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="app_compras_app.mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo.
+                        </video>
+                    </div>
+
+                    <h2>Desafio do Cliente</h2>
+                    <p>Empresa industrial com processos de compras totalmente manuais, utilizando planilhas Excel compartilhadas por e-mail, resultando em:</p>
+                    <ul style="margin: 1rem 0 1rem 2rem; color: var(--gray);">
+                        <li>Perda de documentos
