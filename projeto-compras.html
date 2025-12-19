@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -279,4 +278,141 @@
                     <h2>Desafio do Cliente</h2>
                     <p>Empresa industrial com processos de compras totalmente manuais, utilizando planilhas Excel compartilhadas por e-mail, resultando em:</p>
                     <ul style="margin: 1rem 0 1rem 2rem; color: var(--gray);">
-                        <li>Perda de documentos
+                        <li>Perda de documentos importantes</li>
+                        <li>Atrasos nas aprovações (média de 7 dias)</li>
+                        <li>Falta de visibilidade do processo</li>
+                        <li>Dificuldade em gerar relatórios</li>
+                        <li>Erros frequentes em cálculos manuais</li>
+                    </ul>
+
+                    <h2>Solução Implementada</h2>
+                    <p>Desenvolvi um sistema completo baseado em Power Platform com as seguintes funcionalidades:</p>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-clipboard-list"></i> Requisição de Compras</h3>
+                        <p>Formulário digital com validação em tempo real, cálculo automático de totais e upload de documentos.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-check-circle"></i> Fluxo de Aprovações</h3>
+                        <p>Workflow automatizado com notificações via Teams e e-mail, aprovações por hierarquia e histórico completo.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-exchange-alt"></i> Integração com Fornecedores</h3>
+                        <p>Conexão via API com sistemas dos fornecedores para cotação automática e status de entrega.</p>
+                    </div>
+
+                    <h2>Tecnologias Utilizadas</h2>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power Apps (Canvas App)</span>
+                        <span class="tech-tag">Power Automate (15 fluxos)</span>
+                        <span class="tech-tag">Dataverse (10 tabelas)</span>
+                        <span class="tech-tag">SharePoint (Documentos)</span>
+                        <span class="tech-tag">Power BI (Dashboard)</span>
+                        <span class="tech-tag">Microsoft Teams</span>
+                        <span class="tech-tag">Outlook Integration</span>
+                    </div>
+
+                    <h2>Resultados Alcançados</h2>
+                    <div class="result-item">
+                        <h3>70% Redução no Tempo de Processamento</h3>
+                        <p>Processo que levava 7 dias agora é concluído em 2 dias.</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h3>90% Eliminação de Erros Manuais</h3>
+                        <p>Validações automáticas eliminaram erros em cálculos e dados.</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h3>100% Visibilidade do Processo</h3>
+                        <p>Dashboard em tempo real para acompanhamento de status.</p>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="info-card">
+                        <h3>Detalhes do Projeto</h3>
+                        <p><strong>Cliente:</strong> Empresa Industrial Multinacional</p>
+                        <p><strong>Equipe:</strong> Desenvolvimento solo (Leonardo Zanré)</p>
+                        <p><strong>Usuários:</strong> 50+ usuários ativos</p>
+                        <p><strong>Ambiente:</strong> Power Platform Premium</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Funcionalidades Principais</h3>
+                        <ul style="margin: 1rem 0 1rem 1.5rem; color: var(--gray);">
+                            <li>Requisição digital de compras</li>
+                            <li>Aprovações hierárquicas</li>
+                            <li>Integração com ERP</li>
+                            <li>Dashboard analítico</li>
+                            <li>Notificações automáticas</li>
+                            <li>Gestão de fornecedores</li>
+                            <li>Relatórios automáticos</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Próximos Passos</h3>
+                        <p>Expansão para módulos de:</p>
+                        <ul style="margin: 1rem 0 1rem 1.5rem; color: var(--gray);">
+                            <li>Gestão de contratos</li>
+                            <li>Controle de inventário</li>
+                            <li>Integração com logística</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contato" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-envelope"></i> Quer uma Solução Similar?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <div class="container">
+            <div class="navigation-links">
+                <a href="projeto-ged.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Projeto Anterior
+                </a>
+                
+                <a href="projeto-operacional.html" class="btn btn-secondary">
+                    Próximo Projeto <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                © 2024 Leonardo Zanré | Power Platform Expert
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Controle do vídeo
+        const video = document.querySelector('.project-video');
+        if (video) {
+            video.addEventListener('loadeddata', function() {
+                console.log('Vídeo carregado com sucesso');
+            });
+            
+            video.addEventListener('error', function() {
+                console.log('Erro ao carregar vídeo');
+                video.parentElement.innerHTML = `
+                    <div style="padding: 2rem; text-align: center;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--green-primary); margin-bottom: 1rem;"></i>
+                        <h3>Vídeo não disponível</h3>
+                        <p>Entre em contato para ver a demonstração completa</p>
+                        <a href="mailto:leonardo.zanre@logicbin.com.br" class="btn btn-primary" style="margin-top: 1rem;">
+                            <i class="fas fa-envelope"></i> Solicitar Demonstração
+                        </a>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
