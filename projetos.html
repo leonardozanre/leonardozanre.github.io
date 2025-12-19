@@ -1,1 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Projetos | Portfólio Power Platform</title>
+    <meta name="description" content="Portfólio completo com todos os projetos Power Platform desenvolvidos por Leonardo Zanré.">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --black: #000000;
+            --black-light: #0a0a0a;
+            --black-card: #111111;
+            --green-primary: #00ff88;
+            --green-secondary: #00cc6a;
+            --green-dark: #00994d;
+            --green-glow: rgba(0, 255, 136, 0.2);
+            --white: #ffffff;
+            --gray: #888888;
+            --gray-light: #444444;
+            --gray-dark: #222222;
+            
+            --gradient-green: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+            --gradient-black: linear-gradient(135deg, var(--black), var(--black-light));
+            --shadow-green: 0 0 30px var(--green-glow);
+            --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: var(--gradient-green);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-green);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--green-primary);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-dark);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--green-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--green-primary);
+            color: var(--black);
+        }
+
+        /* Hero */
+        .page-hero {
+            padding: 150px 0 100px;
+            background: var(--gradient-black);
+            text-align: center;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-green);
+            color: var(--black);
+            box-shadow: var(--shadow-green);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--green-primary);
+            border: 2px solid var(--green-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--green-primary);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        /* Projetos Grid */
+        .projects-section {
+            padding: 100px 0;
+            background: var(--black-light);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--black-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--gray-dark);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--green-primary);
+            box-shadow: var(--shadow-card);
+        }
+
+        .project-media {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-video {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--green-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 1.5rem;
+            transform: scale(0.8);
+            transition: var(--transition);
+        }
+
+        .project-card:hover .play-btn {
+            transform: scale(1);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--green-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* Categorias */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: var(--black-card);
+            color: var(--white);
+            border: 1px solid var(--gray-dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--green-primary);
+            color: var(--black);
+            border-color: var(--green-primary);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--black-card);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--gray-dark);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--green-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-list i {
+            color: var(--green-primary);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--black);
+            border: 1px solid var(--gray-dark);
+            color: var(--green-primary);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--green-primary);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-dark);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">POWER PORTFOLIO</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html" class="active">Projetos</a></li>
+                    <li><a href="index.html#tecnologias">Tecnologias</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="fade-in">Todos os Projetos</h1>
+            <p class="fade-in" style="max-width: 600px; margin: 0 auto; font-size: 1.2rem;">
+                Coleção completa de <span style="color: var(--green-primary);">+50 projetos reais</span> desenvolvidos 
+                com Power Platform para diferentes necessidades empresariais.
+            </p>
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="fade-in">Filtrar por Categoria</h2>
+            
+            <div class="categories fade-in">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="power-apps">Power Apps</button>
+                <button class="category-btn" data-category="power-automate">Power Automate</button>
+                <button class="category-btn" data-category="power-bi">Power BI</button>
+                <button class="category-btn" data-category="sharepoint">SharePoint</button>
+                <button class="category-btn" data-category="dataverse">Dataverse</button>
+                <button class="category-btn" data-category="ai-builder">AI Builder</button>
+            </div>
+
+            <!-- Projetos em Grid -->
+            <div class="projects-grid">
+                
+                <!-- Projeto 1 -->
+                <a href="projeto-compras.html" class="project-card fade-in" data-categories="power-apps power-automate dataverse">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="app_compras_app.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de Compras</h3>
+                        <p>Aplicação completa para gestão de processos de compras com aprovações automatizadas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">Dataverse</span>
+                            <span class="tech-tag">SharePoint</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Redução de 70% no tempo de processamento</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 2 -->
+                <a href="projeto-operacional.html" class="project-card fade-in" data-categories="power-bi sharepoint power-automate">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="app_controle_operacional.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Operacional</h3>
+                        <p>Painel em tempo real com monitoramento de operações e KPIs automatizados.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">SQL Server</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Aumento de 40% na produtividade</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 3 -->
+                <a href="projeto-ged.html" class="project-card fade-in" data-categories="power-apps ai-builder sharepoint">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="ged_contratos.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>GED - Contratos</h3>
+                        <p>Sistema de gestão eletrônica de documentos com OCR e versionamento.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">AI Builder</span>
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">OneDrive</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Redução de 85% no tempo de busca</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 4 - RH -->
+                <a href="projeto-rh.html" class="project-card fade-in" data-categories="power-apps power-automate sharepoint">
+                    <div class="project-media">
+                        <div style="width: 100%; height: 100%; background: var(--gradient-green); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-users" style="font-size: 4rem; color: var(--black);"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de RH</h3>
+                        <p>Plataforma para gestão de processos de recursos humanos com formulários digitais.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">Microsoft Forms</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Automação de 90% dos processos manuais</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 5 - Vendas -->
+                <a href="projeto-vendas.html" class="project-card fade-in" data-categories="power-bi power-apps dataverse">
+                    <div class="project-media">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chart-line" style="font-size: 4rem; color: var(--white);"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard de Vendas</h3>
+                        <p>Painel analítico para acompanhamento de vendas por região, produto e vendedor.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Dataverse</span>
+                            <span class="tech-tag">Excel Online</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Aumento de 25% na conversão</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 6 - Manutenção -->
+                <a href="projeto-manutencao.html" class="project-card fade-in" data-categories="power-apps power-automate sharepoint">
+                    <div class="project-media">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-tools" style="font-size: 4rem; color: var(--white);"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Controle de Manutenção</h3>
+                        <p>Sistema para gestão de ordens de serviço e manutenção preventiva.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">Teams</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Redução de 60% em downtime</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Voltar para Início
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Portfólio Power Platform</h4>
+                    <p style="color: var(--gray);">
+                        Projetos reais desenvolvidos com Power Apps, 
+                        Power Automate, Power BI e toda suíte Microsoft.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/leonardozanre" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@leonardozanre-logicbin" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/leonardozanre" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--gray);">leonardo.zanre@logicbin.com.br</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="https://wa.me/5511953621063" style="color: var(--gray);">(11) 95362-1063</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul class="contact-list">
+                        <li><a href="index.html" style="color: var(--gray);">Página Inicial</a></li>
+                        <li><a href="projetos.html" style="color: var(--green-primary);">Todos os Projetos</a></li>
+                        <li><a href="index.html#tecnologias" style="color: var(--gray);">Tecnologias</a></li>
+                        <li><a href="index.html#contato" style="color: var(--gray);">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © <span id="current-year">2024</span> Leonardo Zanré | Portfólio Power Platform
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Atualiza ano no copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Filtro de categorias
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class de todos
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Adiciona active no clicado
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    projectCards.forEach(card => {
+                        const cardCategories = card.getAttribute('data-categories');
+                        
+                        if (category === 'all' || cardCategories.includes(category)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Animações
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
