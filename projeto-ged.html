@@ -64,12 +64,19 @@
             padding-left: 1rem;
         }
 
+        h3 {
+            font-size: 1.5rem;
+            color: var(--green-primary);
+            margin: 1.5rem 0 1rem;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
+        /* Header */
         .project-header {
             background: var(--gradient-black);
             padding: 100px 0 50px;
@@ -84,10 +91,46 @@
             text-decoration: none;
             font-weight: 500;
             margin-bottom: 2rem;
+            transition: var(--transition);
         }
 
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-item i {
+            color: var(--green-primary);
+        }
+
+        /* Conteúdo */
         .project-content {
             padding: 50px 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .video-container {
@@ -95,7 +138,6 @@
             border-radius: var(--radius);
             overflow: hidden;
             border: 1px solid var(--gray-dark);
-            margin: 2rem 0;
         }
 
         .project-video {
@@ -119,6 +161,20 @@
             border: 1px solid rgba(0, 255, 136, 0.2);
         }
 
+        .info-card {
+            background: var(--black-card);
+            border: 1px solid var(--gray-dark);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .result-item {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--green-primary);
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -136,15 +192,46 @@
             color: var(--black);
         }
 
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--green-primary);
+            border: 2px solid var(--green-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--green-primary);
+            color: var(--black);
+        }
+
+        /* Footer */
         .project-footer {
             background: var(--black-card);
             padding: 3rem 0;
             border-top: 1px solid var(--gray-dark);
             margin-top: 4rem;
         }
+
+        .navigation-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
     </style>
 </head>
 <body>
+    <!-- Header do Projeto -->
     <header class="project-header">
         <div class="container">
             <a href="projetos.html" class="back-link">
@@ -156,52 +243,179 @@
                 Sistema completo de gestão documental com OCR inteligente, 
                 versionamento automático e busca avançada desenvolvido com Power Platform.
             </p>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2023 • Concluído</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-industry"></i>
+                    <span>Segmento: Jurídico/Contratos</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Duração: 2 meses</span>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Conteúdo Principal -->
     <section class="project-content">
         <div class="container">
-            <h2>Demonstração do Sistema</h2>
-            <div class="video-container">
-                <video class="project-video" controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                    <source src="ged_contratos.mp4" type="video/mp4">
-                    Seu navegador não suporta o vídeo.
-                </video>
-            </div>
+            <div class="project-grid">
+                <!-- Coluna Principal -->
+                <div>
+                    <h2>Demonstração do Sistema</h2>
+                    <div class="video-container">
+                        <video class="project-video" controls poster="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="ged_contratos.mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo.
+                        </video>
+                    </div>
 
-            <h2>Tecnologias Utilizadas</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">Power Apps</span>
-                <span class="tech-tag">AI Builder (OCR)</span>
-                <span class="tech-tag">SharePoint</span>
-                <span class="tech-tag">OneDrive</span>
-                <span class="tech-tag">Power Automate</span>
-                <span class="tech-tag">PDF Services</span>
-                <span class="tech-tag">Microsoft Teams</span>
-            </div>
+                    <h2>Desafio do Cliente</h2>
+                    <p>Departamento jurídico com mais de 5.000 contratos físicos e digitais espalhados em diferentes sistemas, resultando em:</p>
+                    <ul style="margin: 1rem 0 1rem 2rem; color: var(--gray);">
+                        <li>Dificuldade em localizar contratos específicos</li>
+                        <li>Risco de perda de documentos importantes</li>
+                        <li>Falta de controle de versões</li>
+                        <li>Alertas de vencimento manuais e falhos</li>
+                        <li>Tempo excessivo para extrair dados de contratos</li>
+                    </ul>
 
-            <div class="tech-tags">
-                <h3>Funcionalidades:</h3>
-                <span class="tech-tag">Upload inteligente de PDFs</span>
-                <span class="tech-tag">Extração automática de dados</span>
-                <span class="tech-tag">Versionamento de documentos</span>
-                <span class="tech-tag">Busca por conteúdo</span>
-                <span class="tech-tag">Alertas de vencimento</span>
-                <span class="tech-tag">Fluxo de aprovação</span>
-            </div>
+                    <h2>Solução Implementada</h2>
+                    <p>Desenvolvi um sistema GED completo baseado em Power Platform com as seguintes funcionalidades:</p>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-file-upload"></i> Upload Inteligente</h3>
+                        <p>Processamento automático de PDFs com extração de metadados usando AI Builder OCR.</p>
+                    </div>
 
-            <a href="index.html#contato" class="btn btn-primary">
-                <i class="fas fa-file-contract"></i> Precisa de um GED?
-            </a>
+                    <div class="info-card">
+                        <h3><i class="fas fa-search"></i> Busca Avançada</h3>
+                        <p>Pesquisa por texto completo, palavras-chave, datas, partes envolvidas e status.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Versionamento Automático</h3>
+                        <p>Controle completo de versões com histórico de alterações e comparação de documentos.</p>
+                    </div>
+
+                    <h2>Tecnologias Utilizadas</h2>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power Apps (Canvas App)</span>
+                        <span class="tech-tag">AI Builder (OCR)</span>
+                        <span class="tech-tag">SharePoint Document Library</span>
+                        <span class="tech-tag">Power Automate (12 fluxos)</span>
+                        <span class="tech-tag">Dataverse (8 tabelas)</span>
+                        <span class="tech-tag">OneDrive for Business</span>
+                        <span class="tech-tag">Microsoft Teams Integration</span>
+                    </div>
+
+                    <h2>Resultados Alcançados</h2>
+                    <div class="result-item">
+                        <h3>80% Redução no Tempo de Busca</h3>
+                        <p>De 15 minutos para 3 minutos na localização de contratos.</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h3>Zero Perda de Documentos</h3>
+                        <p>Centralização e backup automático eliminaram perdas.</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h3>Alertas 100% Automatizados</h3>
+                        <p>Notificações proativas de vencimento e renovação.</p>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="info-card">
+                        <h3>Detalhes do Projeto</h3>
+                        <p><strong>Cliente:</strong> Empresa do Setor Financeiro</p>
+                        <p><strong>Equipe:</strong> Desenvolvimento solo (Leonardo Zanré)</p>
+                        <p><strong>Usuários:</strong> 30 usuários ativos</p>
+                        <p><strong>Documentos:</strong> 5.000+ contratos gerenciados</p>
+                        <p><strong>Armazenamento:</strong> 50GB SharePoint</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Funcionalidades Principais</h3>
+                        <ul style="margin: 1rem 0 1rem 1.5rem; color: var(--gray);">
+                            <li>Upload inteligente de PDFs</li>
+                            <li>Extração automática de dados (OCR)</li>
+                            <li>Versionamento de documentos</li>
+                            <li>Busca por conteúdo</li>
+                            <li>Alertas de vencimento</li>
+                            <li>Fluxo de aprovação</li>
+                            <li>Relatórios de conformidade</li>
+                            <li>Assinatura digital integrada</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Processamento com IA</h3>
+                        <p>AI Builder reconhece e extrai automaticamente:</p>
+                        <ul style="margin: 1rem 0 1rem 1.5rem; color: var(--gray);">
+                            <li>Nomes das partes</li>
+                            <li>Valores e datas</li>
+                            <li>Cláusulas importantes</li>
+                            <li>Assinaturas e carimbos</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contato" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-file-contract"></i> Precisa de um GED?
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="project-footer">
         <div class="container">
-            <p style="text-align: center; color: var(--gray);">
-                © 2024 Leonardo Zanré | GED desenvolvido com Power Platform
-            </p>
+            <div class="navigation-links">
+                <a href="projeto-compras.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Projeto Anterior
+                </a>
+                
+                <a href="projeto-dashboard.html" class="btn btn-secondary">
+                    Próximo Projeto <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                © 2024 Leonardo Zanré | Power Platform Expert
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Controle do vídeo
+        const video = document.querySelector('.project-video');
+        if (video) {
+            video.addEventListener('loadeddata', function() {
+                console.log('Vídeo carregado com sucesso');
+            });
+            
+            video.addEventListener('error', function() {
+                console.log('Erro ao carregar vídeo');
+                video.parentElement.innerHTML = `
+                    <div style="padding: 2rem; text-align: center;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--green-primary); margin-bottom: 1rem;"></i>
+                        <h3>Vídeo não disponível</h3>
+                        <p>Entre em contato para ver a demonstração completa</p>
+                        <a href="mailto:leonardo.zanre@logicbin.com.br" class="btn btn-primary" style="margin-top: 1rem;">
+                            <i class="fas fa-envelope"></i> Solicitar Demonstração
+                        </a>
+                    </div>
+                `;
+            });
+        }
+    </script>
 </body>
 </html>
