@@ -358,16 +358,15 @@
             height: 40px;
             background: var(--black);
             border: 1px solid var(--gray-dark);
+            color: var(--green-primary);
             border-radius: 50%;
-            color: var(--white);
             transition: var(--transition);
-            text-decoration: none;
         }
 
         .social-link:hover {
             background: var(--green-primary);
             color: var(--black);
-            border-color: var(--green-primary);
+            transform: translateY(-3px);
         }
 
         .copyright {
@@ -377,13 +376,28 @@
             color: var(--gray);
             font-size: 0.9rem;
         }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header class="main-header">
         <div class="container header-content">
-            <a href="index.html" class="logo">LOGICBIN - PORTFOLIO</a>
+            <a href="/" class="logo">LOGICBIN - PORTFOLIO</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#portfolio" class="active">Projetos</a></li>
@@ -394,50 +408,62 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Especialista em Power Platform</h1>
-            <p style="font-size: 1.2rem; color: var(--gray); max-width: 800px;">
-                Transformando processos manuais em soluções digitais de alto impacto. 
-                Especialista em Power Apps, Power Automate e Power BI com foco em resultados mensuráveis.
-            </p>
-            
-            <div class="hero-stats">
-                <div class="stat-box">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projetos Entregues</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">6+</span>
-                    <span class="stat-label">Anos de Experiência</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Segmentos Atendidos</span>
+            <div class="hero-content">
+                <h1>PORTFÓLIO - LOGICBIN</h1>
+                <p style="font-size: 1.2rem; color: var(--gray); max-width: 600px;">
+                    <span class="highlight">Mais de 50 projetos reais</span> desenvolvidos com 
+                    <span class="highlight">Power Apps, Power Automate, Power BI, SharePoint</span> 
+                    e toda suíte Microsoft. Resultados comprovados em diversos segmentos.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projetos Entregues</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Segmentos Atendidos</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Foco em Resultados</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfólio de Projetos -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
             <h2>Projetos em Destaque</h2>
+            <p style="max-width: 600px; margin-bottom: 3rem;">
+                Seleção de projetos reais implementados para diferentes necessidades empresariais.
+                Cada solução foi desenvolvida com foco em resultados mensuráveis.
+            </p>
             
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="power-apps">Power Apps</button>
                 <button class="filter-btn" data-filter="power-bi">Power BI</button>
-                <button class="filter-btn" data-filter="power-automate">Power Automate</button>
+                <button class="filter-btn" data-filter="automate">Power Automate</button>
                 <button class="filter-btn" data-filter="sharepoint">SharePoint</button>
             </div>
-
+            
             <div class="portfolio-grid">
-                <!-- PROJETO 1: Sistema de Compras -->
-                <a href="projeto-compras.html" class="project-card" data-category="power-apps power-automate dataverse">
+                
+                <!-- PROJETO 1: Sistema de Compras Automatizado -->
+                <a href="projeto-compras.html" class="project-card" data-category="power-apps automate">
                     <div class="project-media">
-                        <video class="project-video" preload="metadata" loop muted autoplay playsinline>
+                        <video class="project-video" preload="metadata" loop muted autoplay>
                             <source src="app_compras_app.mp4" type="video/mp4">
                             Seu navegador não suporta o vídeo.
                         </video>
@@ -452,15 +478,11 @@
                         <p style="color: var(--green-primary); font-weight: 600;">Resultado: Redução de 70% no tempo de processamento</p>
                     </div>
                 </a>
-
-                <!-- PROJETO 2: HR System -->
-                <a href="projeto-rh.html" class="project-card" data-category="power-apps power-automate power-bi dataverse">
+                
+                <!-- PROJETO 2: HR System: Gestão de Pessoas -->
+                <a href="projeto-rh.html" class="project-card" data-category="power-apps automate power-bi dataverse">
                     <div class="project-media">
-                        <video class="project-video" preload="metadata" loop muted autoplay playsinline>
-                            <source src="app_sistema_rh.mp4" type="video/mp4">
-                            Seu navegador não suporta o vídeo.
-                        </video>
-                        <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+                      <video class="project-video" preload="auto" loop muted autoplay playsinline>\n                            <source src="app_manutencao.mp4" type="video/mp4">\n                            Seu navegador não suporta o vídeo.\n                        </video>                    <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
                     </div>
                     <div class="project-content">
                         <h3>HR System: Gestão de Pessoas</h3>
@@ -473,9 +495,9 @@
                 </a>
 
                 <!-- PROJETO 3: Dashboard Operacional -->
-                <a href="projeto-operacional.html" class="project-card" data-category="power-bi power-automate">
+                <a href="projeto-operacional.html" class="project-card" data-category="power-bi automate">
                     <div class="project-media">
-                        <video class="project-video" preload="metadata" loop muted autoplay playsinline>
+                        <video class="project-video" preload="metadata" loop muted autoplay>
                             <source src="app_controle_operacional.mp4" type="video/mp4">
                             Seu navegador não suporta o vídeo.
                         </video>
@@ -491,10 +513,10 @@
                     </div>
                 </a>
 
-                <!-- PROJETO 4: GED -->
-                <a href="projeto-ged.html" class="project-card" data-category="power-apps power-automate sharepoint">
+                <!-- PROJETO 4: GED - Gestão de Contratos -->
+                <a href="projeto-ged.html" class="project-card" data-category="power-apps automate sharepoint">
                     <div class="project-media">
-                        <video class="project-video" preload="metadata" loop muted autoplay playsinline>
+                        <video class="project-video" preload="metadata" loop muted autoplay>
                             <source src="ged_contratos.mp4" type="video/mp4">
                             Seu navegador não suporta o vídeo.
                         </video>
@@ -510,11 +532,11 @@
                     </div>
                 </a>
 
-                <!-- PROJETO 5: Manutenção -->
-                <a href="projeto-manutencao.html" class="project-card" data-category="power-apps power-automate sharepoint">
+                <!-- PROJETO 5: App de Manutenção de Ativos -->
+                <a href="projeto-manutencao.html" class="project-card" data-category="power-apps automate">
                     <div class="project-media">
                         <video class="project-video" preload="metadata" loop muted autoplay playsinline>
-                            <source src="app_manutencao.mp4" type="video/mp4">
+                            <source src="app_sistema_rh.mp4" type="video/mp4">
                             Seu navegador não suporta o vídeo.
                         </video>
                         <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
@@ -528,11 +550,12 @@
                         <p style="color: var(--green-primary); font-weight: 600;">Resultado: Aumento de 25% na eficiência da equipe</p>
                     </div>
                 </a>
+                
             </div>
         </div>
     </section>
 
-    <!-- Seção de Contato -->
+    <!-- Seção de Contato (Nova) -->
     <section id="contato-section" class="portfolio-section" style="background: var(--black);">
         <div class="container">
             <h2>Fale Conosco</h2>
@@ -541,6 +564,7 @@
             </p>
             
             <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                
                 <a href="https://wa.me/5511953621063" target="_blank" class="project-card" style="background: var(--green-primary); color: var(--black); border-color: var(--green-primary);">
                     <div class="project-content" style="text-align: center;">
                         <i class="fab fa-whatsapp" style="font-size: 3rem; margin-bottom: 15px;"></i>
@@ -575,6 +599,10 @@
     <section id="tecnologias" class="portfolio-section">
         <div class="container">
             <h2>Tecnologias e Expertise</h2>
+            <p style="max-width: 600px; margin-bottom: 3rem;">
+                Minha experiência abrange toda a suite Microsoft Power Platform e tecnologias complementares.
+            </p>
+            
             <div class="portfolio-grid">
                 <div class="project-card" style="padding: 2rem;">
                     <h3>Power Apps</h3>
@@ -586,54 +614,54 @@
                 
                 <div class="project-card" style="padding: 2rem;">
                     <h3>Power Automate</h3>
-                    <p>Criação de fluxos de trabalho automatizados, aprovações, integrações e RPA.</p>
+                    <p>Criação de fluxos de trabalho automatizados, aprovações, integrações e RPA (Robotic Process Automation).</p>
                     <div class="project-tech">
                         <span class="tech-tag">Cloud Flows</span><span class="tech-tag">RPA</span><span class="tech-tag">Aprovações</span>
                     </div>
                 </div>
                 
-                <div class="project-card" style="padding: 2rem;">
-                    <h3>Power BI</h3>
-                    <p>Desenvolvimento de dashboards analíticos, modelagem de dados (DAX) e relatórios estratégicos.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">DAX</span><span class="tech-tag">Modelagem de Dados</span><span class="tech-tag">Dashboards</span>
-                    </div>
-                </div>
-                
-                <div class="project-card" style="padding: 2rem;">
-                    <h3>AI Builder & Power Pages</h3>
-                    <p>Implementação de modelos de IA e criação de portais externos seguros.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AI Builder</span><span class="tech-tag">OCR</span><span class="tech-tag">Power Pages</span>
-                    </div>
-                </div>
-                
-                <div class="project-card" style="padding: 2rem;">
-                    <h3>SharePoint & OneDrive</h3>
-                    <p>Gestão de conteúdo, repositório de dados e documentos e colaboração em equipe.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">SharePoint</span><span class="tech-tag">OneDrive</span><span class="tech-tag">Listas</span>
-                    </div>
-                </div>
-                
-                <div class="project-card" style="padding: 2rem;">
-                    <h3>Office 365</h3>
-                    <p>Automação de documentos (Word/PDF) e manipulação de dados em planilhas (Excel).</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Word</span><span class="tech-tag">Excel</span><span class="tech-tag">PDF</span><span class="tech-tag">OneNote</span>
-                    </div>
-                </div>
-            </div>
+	                <div class="project-card" style="padding: 2rem;">
+	                    <h3>Power BI</h3>
+	                    <p>Desenvolvimento de dashboards analíticos, modelagem de dados (DAX) e relatórios estratégicos.</p>
+	                    <div class="project-tech">
+	                        <span class="tech-tag">DAX</span><span class="tech-tag">Modelagem de Dados</span><span class="tech-tag">Dashboards</span>
+	                    </div>
+	                </div>
+	                
+	                <div class="project-card" style="padding: 2rem;">
+	                    <h3>AI Builder & Power Pages</h3>
+	                    <p>Implementação de modelos de IA (OCR, Processamento de Formulários) e criação de portais externos seguros.</p>
+	                    <div class="project-tech">
+	                        <span class="tech-tag">AI Builder</span><span class="tech-tag">OCR</span><span class="tech-tag">Power Pages</span>
+	                    </div>
+	                </div>
+	                
+	                <div class="project-card" style="padding: 2rem;">
+	                    <h3>SharePoint & OneDrive</h3>
+	                    <p>Gestão de conteúdo, repositório de dados e documentos, controle de versão e colaboração em equipe.</p>
+	                    <div class="project-tech">
+	                        <span class="tech-tag">SharePoint</span><span class="tech-tag">OneDrive</span><span class="tech-tag">Listas</span>
+	                    </div>
+	                </div>
+	                
+	                <div class="project-card" style="padding: 2rem;">
+	                    <h3>Office 365 (Word, Excel, PDF)</h3>
+	                    <p>Automação de documentos (Word/PDF), manipulação de dados em planilhas (Excel) e integração com fluxos.</p>
+	                    <div class="project-tech">
+	                        <span class="tech-tag">Word</span><span class="tech-tag">Excel</span><span class="tech-tag">PDF</span><span class="tech-tag">OneNote</span>
+	                    </div>
+	                </div>
+	            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
+        <footer id="contato" class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>LOGICBIN - PORTFOLIO</h4>
-                    <p>Transformando processos de negócio com a Power Platform.</p>
+                    <p>Transformando processos de negócio com a Power Platform. Soluções customizadas para resultados reais.</p>
                     <div class="social-links">
                         <a href="https://www.youtube.com/@leonardozanre-logicbin" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.logicbin.com.br" target="_blank" class="social-link"><i class="fas fa-globe"></i></a>
@@ -654,19 +682,18 @@
                 <div class="footer-col">
                     <h4>Links Rápidos</h4>
                     <ul class="contact-list">
-                        <li><a href="#portfolio" style="color: var(--gray); text-decoration: none;">Projetos</a></li>
+                        <li><a href="#portfolio" style="color: var(--gray); text-decoration: none;">Projetos em Destaque</a></li>
                         <li><a href="#tecnologias" style="color: var(--gray); text-decoration: none;">Tecnologias</a></li>
-                        <li><a href="contato.html" style="color: var(--gray); text-decoration: none;">Contato</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados.
-            </div>
+            
+          <div class="copyright">\n                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados. | Contato: <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--green-primary);">leonardo.zanre@logicbin.com.br</a> | WhatsApp: <a href="https://wa.me/5511953621063" target="_blank" style="color: var(--green-primary);">+55 (11) 95362-1063</a>\n            </div>
         </div>
     </footer>
 
     <script>
+        // Script para o filtro de projetos
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
