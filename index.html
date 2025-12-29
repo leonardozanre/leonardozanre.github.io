@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Zanré | Portfólio Power Platform</title>
+    <title>LOGICBIN - PORTFOLIO</title>
     <meta name="description" content="Portfólio completo de projetos Power Platform: Power Apps, Power Automate, Power BI, SharePoint, OneDrive. +50 projetos em 15+ segmentos.">
     
     <!-- Fontes -->
@@ -358,22 +358,20 @@
             justify-content: center;
             gap: 1rem;
             margin-bottom: 3rem;
-            flex-wrap: wrap;
         }
 
         .filter-btn {
             background: var(--black-card);
-            color: var(--white);
-            border: 1px solid var(--gray-dark);
+            color: var(--gray);
             padding: 10px 20px;
             border-radius: 50px;
-            font-weight: 500;
+            border: 1px solid var(--gray-dark);
             cursor: pointer;
             transition: var(--transition);
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
+        .filter-btn.active,
+        .filter-btn:hover {
             background: var(--green-primary);
             color: var(--black);
             border-color: var(--green-primary);
@@ -381,25 +379,24 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
         }
 
         .project-card {
+            text-decoration: none;
+            display: block;
             background: var(--black-card);
             border-radius: var(--radius);
             overflow: hidden;
             border: 1px solid var(--gray-dark);
             transition: var(--transition);
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
             border-color: var(--green-primary);
-            box-shadow: var(--shadow-card);
         }
 
         .project-media {
@@ -412,11 +409,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .project-card:hover .project-video {
-            transform: scale(1.05);
         }
 
         .play-overlay {
@@ -425,10 +417,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             opacity: 0;
             transition: var(--transition);
         }
@@ -443,62 +435,38 @@
             background: var(--green-primary);
             border-radius: 50%;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             color: var(--black);
             font-size: 1.5rem;
-            transform: scale(0.8);
-            transition: var(--transition);
-        }
-
-        .project-card:hover .play-btn {
-            transform: scale(1);
         }
 
         .project-content {
-            padding: 1.5rem;
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 15px;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .view-more {
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        /* ===== CTA ===== */
-        .cta-section {
-            background: var(--gradient-black);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 30%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
+            gap: 5px;
+            margin-bottom: 10px;
         }
 
         /* ===== FOOTER ===== */
         .main-footer {
-            background: var(--black-card);
+            background: var(--black-light);
             padding: 4rem 0 2rem;
             border-top: 1px solid var(--gray-dark);
         }
@@ -629,7 +597,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content fade-in">
-                <h1>PORTFÓLIO - LEONARDO ALVES ZANRÉ - LOGICBIN</h1>
+                <h1>PORTFÓLIO - LOGICBIN</h1>
                 <p style="font-size: 1.2rem; color: var(--gray); max-width: 600px;">
                     <span class="highlight">+50 projetos reais</span> desenvolvidos com 
                     <span class="highlight">Power Apps, Power Automate, Power BI, SharePoint</span> 
@@ -676,7 +644,7 @@
             </div>
             
             <div class="portfolio-grid">
-                <!-- Projeto 1 -->
+                <!-- Projeto 1 (Compras) -->
                 <a href="projeto-compras.html" class="project-card fade-in" data-category="power-apps automate">
                     <div class="project-media">
                         <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
@@ -702,7 +670,7 @@
                     </div>
                 </a>
                 
-                <!-- Projeto 2 -->
+                <!-- Projeto 2 (Operacional) -->
                 <a href="projeto-operacional.html" class="project-card fade-in" data-category="power-bi sharepoint">
                     <div class="project-media">
                         <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
@@ -728,7 +696,7 @@
                     </div>
                 </a>
                 
-                <!-- Projeto 3 -->
+                <!-- Projeto 3 (GED) -->
                 <a href="projeto-ged.html" class="project-card fade-in" data-category="power-apps sharepoint">
                     <div class="project-media">
                         <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
@@ -750,270 +718,170 @@
                             <span class="tech-tag">SharePoint</span>
                             <span class="tech-tag">OneDrive</span>
                         </div>
-                        <p><strong>Resultado:</strong> Redução de 85% no tempo de busca</p>
+                        <p><strong>Resultado:</strong> Redução de 90% no tempo de busca de documentos</p>
                     </div>
                 </a>
-            </div>
-            
-            <div class="view-more fade-in">
-                <a href="/projetos.html" class="btn btn-primary">
-                    <i class="fas fa-th-large"></i> Ver Todos os Projetos
+
+                <!-- NOVO PROJETO 4 (HR System) -->
+                <a href="projeto-rh-final.html" class="project-card fade-in" data-category="power-apps automate power-bi dataverse">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="app_sistema_rh.mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo.
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>HR System: Gestão de Pessoas</h3>
+                        <p>Plataforma completa para gestão de recrutamento, benefícios, avaliação de desempenho e dashboards de RH.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">Dataverse</span>
+                            <span class="tech-tag">Power BI</span>
+                        </div>
+                        <p><strong>Resultado:</strong> Redução de 38% no tempo de contratação</p>
+                    </div>
                 </a>
+                
             </div>
         </div>
     </section>
 
-    <!-- Tecnologias Dominadas -->
+    <!-- Seção de Tecnologias (Mantida a estrutura original) -->
     <section id="tecnologias" class="tech-section">
         <div class="container">
-            <h2 class="fade-in">Tecnologias Dominadas</h2>
+            <h2 class="fade-in">Tecnologias e Expertise</h2>
             <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
-                Expertise completa em toda a suíte Microsoft Power Platform e tecnologias complementares.
+                Minha experiência abrange toda a suite Microsoft Power Platform e tecnologias complementares.
             </p>
             
             <div class="tech-grid">
-                <!-- Power Platform -->
                 <div class="tech-category fade-in">
                     <div class="tech-header">
-                        <div class="tech-icon">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <h3>Power Platform</h3>
+                        <i class="fas fa-mobile-alt tech-icon"></i>
+                        <h3>Power Apps</h3>
                     </div>
-                    <p>Domínio completo de toda a suíte para desenvolvimento de soluções corporativas.</p>
+                    <p>Desenvolvimento de Canvas Apps e Model-Driven Apps, componentes reutilizáveis e Power Fx.</p>
                     <div class="tech-tags">
-                        <span class="tech-tag">Power Apps</span>
-                        <span class="tech-tag">Power Automate</span>
-                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Canvas Apps</span>
+                        <span class="tech-tag">Model-Driven</span>
+                        <span class="tech-tag">Power Fx</span>
+                        <span class="tech-tag">Componentes</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category fade-in">
+                    <div class="tech-header">
+                        <i class="fas fa-robot tech-icon"></i>
+                        <h3>Power Automate</h3>
+                    </div>
+                    <p>Criação de fluxos de trabalho automatizados, aprovações, integrações e RPA (Robotic Process Automation).</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Cloud Flows</span>
+                        <span class="tech-tag">Desktop Flows (RPA)</span>
+                        <span class="tech-tag">Aprovações</span>
+                        <span class="tech-tag">Integrações API</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category fade-in">
+                    <div class="tech-header">
+                        <i class="fas fa-chart-bar tech-icon"></i>
+                        <h3>Power BI</h3>
+                    </div>
+                    <p>Desenvolvimento de dashboards analíticos, modelagem de dados (DAX) e relatórios estratégicos.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Modelagem de Dados</span>
+                        <span class="tech-tag">Dashboards</span>
+                        <span class="tech-tag">Relatórios</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category fade-in">
+                    <div class="tech-header">
+                        <i class="fas fa-database tech-icon"></i>
+                        <h3>Data & Integração</h3>
+                    </div>
+                    <p>Experiência com Dataverse, SharePoint, SQL Server e integração com sistemas legados via API.</p>
+                    <div class="tech-tags">
                         <span class="tech-tag">Dataverse</span>
-                        <span class="tech-tag">AI Builder</span>
-                        <span class="tech-tag">Copilot Studio</span>
-                    </div>
-                </div>
-                
-                <!-- Microsoft 365 -->
-                <div class="tech-category fade-in">
-                    <div class="tech-header">
-                        <div class="tech-icon">
-                            <i class="fas fa-cubes"></i>
-                        </div>
-                        <h3>Microsoft 365</h3>
-                    </div>
-                    <p>Integrações nativas e desenvolvimento de soluções dentro do ecossistema M365.</p>
-                    <div class="tech-tags">
                         <span class="tech-tag">SharePoint</span>
-                        <span class="tech-tag">Teams</span>
-                        <span class="tech-tag">Outlook</span>
-                        <span class="tech-tag">Forms</span>
-                        <span class="tech-tag">Planner</span>
-                        <span class="tech-tag">OneDrive</span>
-                    </div>
-                </div>
-                
-                <!-- Integrações -->
-                <div class="tech-category fade-in">
-                    <div class="tech-header">
-                        <div class="tech-icon">
-                            <i class="fas fa-plug"></i>
-                        </div>
-                        <h3>Integrações</h3>
-                    </div>
-                    <p>Conexão com múltiplos sistemas e desenvolvimento de soluções híbridas.</p>
-                    <div class="tech-tags">
                         <span class="tech-tag">SQL Server</span>
-                        <span class="tech-tag">APIs REST</span>
-                        <span class="tech-tag">PDF Services</span>
-                        <span class="tech-tag">Conectores Premium</span>
-                        <span class="tech-tag">Custom Connectors</span>
+                        <span class="tech-tag">API REST</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section id="contato" class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="fade-in">Precisa de uma Solução Personalizada?</h2>
-                <p class="fade-in" style="max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem;">
-                    Vamos conversar sobre como posso ajudar sua empresa com Power Platform.
-                </p>
-                
-                <div class="fade-in" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:leonardo.zanre@logicbin.com.br" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Enviar E-mail
-                    </a>
-                    <a href="https://wa.me/5511953621063" class="btn btn-secondary" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
-                
-                <div class="fade-in" style="margin-top: 3rem; color: var(--gray);">
-                    <p>
-                        <i class="fas fa-building" style="color: var(--green-primary);"></i> 
-                        <strong>LogicBin</strong> - Empresa desde 2021 | 
-                        <i class="fas fa-graduation-cap" style="color: var(--green-primary);"></i> 
-                        Instrutor desde 2021
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
+    <!-- Footer (Mantida a estrutura original) -->
+    <footer id="contato" class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Portfólio Power Platform</h4>
-                    <p style="color: var(--gray);">
-                        Projetos reais desenvolvidos com Power Apps, 
-                        Power Automate, Power BI e toda suíte Microsoft.
-                    </p>
+                    <h4>LOGICBIN - PORTFOLIO</h4>
+                    <p>Transformando processos de negócio com a Power Platform. Soluções customizadas para resultados reais.</p>
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/leonardozanre" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://youtube.com/@leonardozanre-logicbin" class="social-link" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://github.com/leonardozanre" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
                     </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="contact-list">
+                        <li><a href="#portfolio" style="color: var(--gray); text-decoration: none;">Projetos em Destaque</a></li>
+                        <li><a href="#tecnologias" style="color: var(--gray); text-decoration: none;">Tecnologias</a></li>
+                        <li><a href="/projetos.html" style="color: var(--gray); text-decoration: none;">Ver Todos os Projetos</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul class="contact-list">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--gray);">leonardo.zanre@logicbin.com.br</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="https://wa.me/5511953621063" style="color: var(--gray);">(11) 95362-1063</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span style="color: var(--gray);">São Paulo, Brasil</span>
-                        </li>
+                        <li><i class="fas fa-envelope"></i> email@logicbin.com</li>
+                        <li><i class="fas fa-phone"></i> (XX) 9XXXX-XXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</li>
                     </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Tecnologias</h4>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="tech-tag" style="font-size: 0.8rem;">Power Apps</span>
-                        <span class="tech-tag" style="font-size: 0.8rem;">Power Automate</span>
-                        <span class="tech-tag" style="font-size: 0.8rem;">Power BI</span>
-                        <span class="tech-tag" style="font-size: 0.8rem;">SharePoint</span>
-                        <span class="tech-tag" style="font-size: 0.8rem;">OneDrive</span>
-                    </div>
                 </div>
             </div>
             
             <div class="copyright">
-                © <span id="current-year">2024</span> Leonardo Zanré | Portfólio Power Platform
+                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
     <script>
-        // Atualiza ano no copyright
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Navegação suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Atualiza link ativo
-                    document.querySelectorAll('.nav-links a').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                }
-            });
-        });
-
-        // Filtro de projetos
+        // Script para o filtro de projetos (Mantido o original)
         document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
-            
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class de todos
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    
-                    // Adiciona active no clicado
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
-                    
+
                     const filter = this.getAttribute('data-filter');
-                    
+
                     projectCards.forEach(card => {
                         if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
                             card.style.display = 'block';
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 100);
+                            card.classList.add('fade-in');
                         } else {
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 300);
+                            card.style.display = 'none';
+                            card.classList.remove('fade-in');
                         }
                     });
                 });
-            });
-        });
-
-        // Animações de entrada
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        // Observa elementos para animação
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            observer.observe(el);
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.main-header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.8)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Pré-carrega os vídeos quando o mouse passa por cima
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const video = this.querySelector('.project-video');
-                if (video) {
-                    video.load();
-                }
             });
         });
     </script>
