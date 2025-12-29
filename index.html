@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGICBIN - PORTFOLIO</title>
+    <title>LOGICBIN - PORTFOLIO | Power Platform</title>
     <meta name="description" content="Portfólio completo de projetos Power Platform: Power Apps, Power Automate, Power BI, SharePoint, OneDrive. +50 projetos em 15+ segmentos.">
     
     <!-- Fontes -->
@@ -17,22 +17,17 @@
     <style>
         /* ===== VARIÁVEIS ===== */
         :root {
-            /* Cores - Tema Preto & Verde */
             --black: #000000;
             --black-light: #0a0a0a;
             --black-card: #111111;
             --green-primary: #00ff88;
             --green-secondary: #00cc6a;
-            --green-dark: #00994d;
             --green-glow: rgba(0, 255, 136, 0.2);
             --white: #ffffff;
             --gray: #888888;
-            --gray-light: #444444;
             --gray-dark: #222222;
             
-            /* Efeitos */
             --gradient-green: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
-            --gradient-black: linear-gradient(135deg, var(--black), var(--black-light));
             --shadow-green: 0 0 30px var(--green-glow);
             --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
             --radius: 12px;
@@ -59,7 +54,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             line-height: 1.2;
@@ -91,22 +86,6 @@
             height: 4px;
             background: var(--gradient-green);
             border-radius: 2px;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-            color: var(--green-primary);
-            margin-bottom: 1rem;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--gray);
-        }
-
-        .highlight {
-            color: var(--green-primary);
-            font-weight: 600;
         }
 
         .container {
@@ -172,26 +151,9 @@
         .hero {
             padding-top: 150px;
             padding-bottom: 100px;
-            background: var(--gradient-black);
+            background: linear-gradient(135deg, var(--black), var(--black-light));
             position: relative;
             overflow: hidden;
-        }
-
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--green-glow) 0%, transparent 70%);
-            filter: blur(100px);
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
         }
 
         .hero-stats {
@@ -219,133 +181,6 @@
             color: var(--gray);
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        /* ===== BOTÕES ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .btn-primary {
-            background: var(--gradient-green);
-            color: var(--black);
-            box-shadow: var(--shadow-green);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--green-primary);
-            border: 2px solid var(--green-primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--green-primary);
-            color: var(--black);
-            transform: translateY(-3px);
-        }
-
-        /* ===== CARDS ===== */
-        .card {
-            background: var(--black-card);
-            border: 1px solid var(--gray-dark);
-            border-radius: var(--radius);
-            padding: 2rem;
-            transition: var(--transition);
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--green-primary);
-            box-shadow: var(--shadow-card);
-        }
-
-        .card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-green);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .card:hover:before {
-            opacity: 1;
-        }
-
-        /* ===== SEÇÃO TECNOLOGIAS ===== */
-        .tech-section {
-            background: var(--black-light);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .tech-category {
-            background: var(--black-card);
-            border-radius: var(--radius);
-            padding: 2rem;
-            border: 1px solid var(--gray-dark);
-        }
-
-        .tech-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-icon {
-            font-size: 2rem;
-            color: var(--green-primary);
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            background: rgba(0, 255, 136, 0.1);
-            color: var(--green-primary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            transition: var(--transition);
-        }
-
-        .tech-tag:hover {
-            background: rgba(0, 255, 136, 0.2);
-            transform: translateY(-2px);
         }
 
         /* ===== GALERIA DE PROJETOS ===== */
@@ -464,6 +299,15 @@
             margin-bottom: 10px;
         }
 
+        .tech-tag {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--green-primary);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
         /* ===== FOOTER ===== */
         .main-footer {
             background: var(--black-light);
@@ -543,37 +387,9 @@
                 font-size: 2rem;
             }
             
-            .hero {
-                padding-top: 120px;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
-            
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .hero-stats {
-                gap: 1.5rem;
-            }
-        }
-
-        /* ===== ANIMAÇÕES ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.6s ease-out forwards;
         }
     </style>
 </head>
@@ -587,7 +403,6 @@
                     <li><a href="#portfolio" class="active">Projetos</a></li>
                     <li><a href="#tecnologias">Tecnologias</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="/projetos.html" class="btn-secondary" style="padding: 8px 20px;">Ver Todos</a></li>
                 </ul>
             </nav>
         </div>
@@ -596,7 +411,7 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content fade-in">
+            <div class="hero-content">
                 <h1>PORTFÓLIO - LOGICBIN</h1>
                 <p style="font-size: 1.2rem; color: var(--gray); max-width: 600px;">
                     <span class="highlight">+50 projetos reais</span> desenvolvidos com 
@@ -629,13 +444,13 @@
     <!-- Portfólio de Projetos -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2 class="fade-in">Projetos em Destaque</h2>
-            <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
+            <h2>Projetos em Destaque</h2>
+            <p style="max-width: 600px; margin-bottom: 3rem;">
                 Seleção de projetos reais implementados para diferentes necessidades empresariais.
                 Cada solução foi desenvolvida com foco em resultados mensuráveis.
             </p>
             
-            <div class="portfolio-filters fade-in">
+            <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="power-apps">Power Apps</button>
                 <button class="filter-btn" data-filter="power-bi">Power BI</button>
@@ -644,107 +459,99 @@
             </div>
             
             <div class="portfolio-grid">
-                <!-- Projeto 1 (Compras) -->
-                <a href="projeto-compras.html" class="project-card fade-in" data-category="power-apps automate">
+                
+                <!-- PROJETO 1: Sistema de Compras Automatizado -->
+                <a href="projeto-compras.html" class="project-card" data-category="power-apps automate">
                     <div class="project-media">
-                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                            <source src="app_compras_app.mp4" type="video/mp4">
+                        <video class="project-video" preload="metadata" poster="[IMAGEM_CAPA_COMPRAS]">
+                            <source src="app_compras_app(2).mp4" type="video/mp4">
                             Seu navegador não suporta o vídeo.
                         </video>
-                        <div class="play-overlay">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                        <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
                     </div>
                     <div class="project-content">
                         <h3>Sistema de Compras Automatizado</h3>
                         <p>Aplicação completa para gestão de processos de compras com aprovações automatizadas e integração com fornecedores.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Power Apps</span>
-                            <span class="tech-tag">Power Automate</span>
-                            <span class="tech-tag">Dataverse</span>
-                            <span class="tech-tag">SharePoint</span>
+                            <span class="tech-tag">Power Apps</span><span class="tech-tag">Power Automate</span><span class="tech-tag">Dataverse</span>
                         </div>
-                        <p><strong>Resultado:</strong> Redução de 70% no tempo de processamento</p>
+                        <p style="color: var(--green-primary); font-weight: 600;">Resultado: Redução de 70% no tempo de processamento</p>
                     </div>
                 </a>
                 
-                <!-- Projeto 2 (Operacional) -->
-                <a href="projeto-operacional.html" class="project-card fade-in" data-category="power-bi sharepoint">
+                <!-- PROJETO 2: HR System: Gestão de Pessoas -->
+                <a href="projeto-rh.html" class="project-card" data-category="power-apps automate power-bi dataverse">
                     <div class="project-media">
-                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                            <source src="app_controle_operacional.mp4" type="video/mp4">
-                            Seu navegador não suporta o vídeo.
-                        </video>
-                        <div class="play-overlay">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Dashboard Operacional</h3>
-                        <p>Painel em tempo real com monitoramento de operações, KPIs automatizados e alertas proativos.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">SharePoint</span>
-                            <span class="tech-tag">Power Automate</span>
-                        </div>
-                        <p><strong>Resultado:</strong> Aumento de 40% na produtividade</p>
-                    </div>
-                </a>
-                
-                <!-- Projeto 3 (GED) -->
-                <a href="projeto-ged.html" class="project-card fade-in" data-category="power-apps sharepoint">
-                    <div class="project-media">
-                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                            <source src="ged_contratos.mp4" type="video/mp4">
-                            Seu navegador não suporta o vídeo.
-                        </video>
-                        <div class="play-overlay">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>GED - Gestão de Contratos</h3>
-                        <p>Sistema de gestão eletrônica de documentos com OCR, versionamento automático e busca inteligente.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power Apps</span>
-                            <span class="tech-tag">AI Builder</span>
-                            <span class="tech-tag">SharePoint</span>
-                            <span class="tech-tag">OneDrive</span>
-                        </div>
-                        <p><strong>Resultado:</strong> Redução de 90% no tempo de busca de documentos</p>
-                    </div>
-                </a>
-
-                <!-- NOVO PROJETO 4 (HR System) -->
-                <a href="projeto-rh-final.html" class="project-card fade-in" data-category="power-apps automate power-bi dataverse">
-                    <div class="project-media">
-                        <video class="project-video" preload="metadata" poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <video class="project-video" preload="metadata" poster="[IMAGEM_CAPA_RH]">
                             <source src="app_sistema_rh.mp4" type="video/mp4">
                             Seu navegador não suporta o vídeo.
                         </video>
-                        <div class="play-overlay">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                        <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
                     </div>
                     <div class="project-content">
                         <h3>HR System: Gestão de Pessoas</h3>
                         <p>Plataforma completa para gestão de recrutamento, benefícios, avaliação de desempenho e dashboards de RH.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Power Apps</span>
-                            <span class="tech-tag">Power Automate</span>
-                            <span class="tech-tag">Dataverse</span>
-                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Power Apps</span><span class="tech-tag">Power Automate</span><span class="tech-tag">Dataverse</span><span class="tech-tag">Power BI</span>
                         </div>
-                        <p><strong>Resultado:</strong> Redução de 38% no tempo de contratação</p>
+                        <p style="color: var(--green-primary); font-weight: 600;">Resultado: Redução de 38% no tempo de contratação</p>
+                    </div>
+                </a>
+
+                <!-- PROJETO 3: Dashboard Operacional -->
+                <a href="projeto-operacional.html" class="project-card" data-category="power-bi automate">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="[IMAGEM_CAPA_OPERACIONAL]">
+                            <source src="app_controle_operacional.mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo.
+                        </video>
+                        <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Operacional</h3>
+                        <p>Painel em tempo real com monitoramento de operações, KPIs automatizados e alertas proativos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span><span class="tech-tag">SQL Server</span><span class="tech-tag">Power Automate</span>
+                        </div>
+                        <p style="color: var(--green-primary); font-weight: 600;">Resultado: Aumento de 40% na produtividade</p>
+                    </div>
+                </a>
+
+                <!-- PROJETO 4: GED - Gestão de Contratos -->
+                <a href="projeto-ged.html" class="project-card" data-category="power-apps automate sharepoint">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="[IMAGEM_CAPA_GED]">
+                            <source src="ged_contratos(1).mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo.
+                        </video>
+                        <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>GED - Gestão de Contratos</h3>
+                        <p>Sistema de gestão eletrônica de documentos com OCR, versionamento automático e busca inteligente.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps</span><span class="tech-tag">AI Builder</span><span class="tech-tag">SharePoint</span>
+                        </div>
+                        <p style="color: var(--green-primary); font-weight: 600;">Resultado: Redução de 90% no tempo de busca</p>
+                    </div>
+                </a>
+
+                <!-- PROJETO 5: App de Manutenção de Ativos -->
+                <a href="projeto-manutencao.html" class="project-card" data-category="power-apps automate">
+                    <div class="project-media">
+                        <video class="project-video" preload="metadata" poster="[IMAGEM_CAPA_MANUTENCAO]">
+                            <source src="app_manutencao.mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo.
+                        </video>
+                        <div class="play-overlay"><div class="play-btn"><i class="fas fa-play"></i></div></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>App de Manutenção de Ativos</h3>
+                        <p>Solução mobile para registro de ordens de serviço, checklist de inspeção e gestão de ativos em campo.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power Apps Mobile</span><span class="tech-tag">Power Automate</span><span class="tech-tag">SharePoint</span>
+                        </div>
+                        <p style="color: var(--green-primary); font-weight: 600;">Resultado: Aumento de 25% na eficiência da equipe</p>
                     </div>
                 </a>
                 
@@ -752,75 +559,43 @@
         </div>
     </section>
 
-    <!-- Seção de Tecnologias (Mantida a estrutura original) -->
-    <section id="tecnologias" class="tech-section">
+    <!-- Seção de Tecnologias -->
+    <section id="tecnologias" class="portfolio-section">
         <div class="container">
-            <h2 class="fade-in">Tecnologias e Expertise</h2>
-            <p class="fade-in" style="max-width: 600px; margin-bottom: 3rem;">
+            <h2>Tecnologias e Expertise</h2>
+            <p style="max-width: 600px; margin-bottom: 3rem;">
                 Minha experiência abrange toda a suite Microsoft Power Platform e tecnologias complementares.
             </p>
             
-            <div class="tech-grid">
-                <div class="tech-category fade-in">
-                    <div class="tech-header">
-                        <i class="fas fa-mobile-alt tech-icon"></i>
-                        <h3>Power Apps</h3>
-                    </div>
+            <div class="portfolio-grid">
+                <div class="project-card" style="padding: 2rem;">
+                    <h3>Power Apps</h3>
                     <p>Desenvolvimento de Canvas Apps e Model-Driven Apps, componentes reutilizáveis e Power Fx.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Canvas Apps</span>
-                        <span class="tech-tag">Model-Driven</span>
-                        <span class="tech-tag">Power Fx</span>
-                        <span class="tech-tag">Componentes</span>
+                    <div class="project-tech">
+                        <span class="tech-tag">Canvas Apps</span><span class="tech-tag">Model-Driven</span><span class="tech-tag">Power Fx</span>
                     </div>
                 </div>
                 
-                <div class="tech-category fade-in">
-                    <div class="tech-header">
-                        <i class="fas fa-robot tech-icon"></i>
-                        <h3>Power Automate</h3>
-                    </div>
+                <div class="project-card" style="padding: 2rem;">
+                    <h3>Power Automate</h3>
                     <p>Criação de fluxos de trabalho automatizados, aprovações, integrações e RPA (Robotic Process Automation).</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Cloud Flows</span>
-                        <span class="tech-tag">Desktop Flows (RPA)</span>
-                        <span class="tech-tag">Aprovações</span>
-                        <span class="tech-tag">Integrações API</span>
+                    <div class="project-tech">
+                        <span class="tech-tag">Cloud Flows</span><span class="tech-tag">RPA</span><span class="tech-tag">Aprovações</span>
                     </div>
                 </div>
                 
-                <div class="tech-category fade-in">
-                    <div class="tech-header">
-                        <i class="fas fa-chart-bar tech-icon"></i>
-                        <h3>Power BI</h3>
-                    </div>
+                <div class="project-card" style="padding: 2rem;">
+                    <h3>Power BI</h3>
                     <p>Desenvolvimento de dashboards analíticos, modelagem de dados (DAX) e relatórios estratégicos.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">DAX</span>
-                        <span class="tech-tag">Modelagem de Dados</span>
-                        <span class="tech-tag">Dashboards</span>
-                        <span class="tech-tag">Relatórios</span>
-                    </div>
-                </div>
-                
-                <div class="tech-category fade-in">
-                    <div class="tech-header">
-                        <i class="fas fa-database tech-icon"></i>
-                        <h3>Data & Integração</h3>
-                    </div>
-                    <p>Experiência com Dataverse, SharePoint, SQL Server e integração com sistemas legados via API.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Dataverse</span>
-                        <span class="tech-tag">SharePoint</span>
-                        <span class="tech-tag">SQL Server</span>
-                        <span class="tech-tag">API REST</span>
+                    <div class="project-tech">
+                        <span class="tech-tag">DAX</span><span class="tech-tag">Modelagem de Dados</span><span class="tech-tag">Dashboards</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Mantida a estrutura original) -->
+    <!-- Footer -->
     <footer id="contato" class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -828,10 +603,19 @@
                     <h4>LOGICBIN - PORTFOLIO</h4>
                     <p>Transformando processos de negócio com a Power Platform. Soluções customizadas para resultados reais.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.youtube.com/@leonardozanre-logicbin" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/leonardozanre/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:leonardo.zanre@logicbin.com.br" class="social-link"><i class="fas fa-envelope"></i></a>
                     </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato Comercial</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> leonardo.zanre@logicbin.com.br</li>
+                        <li><i class="fas fa-globe"></i> <a href="https://www.logicbin.com.br" target="_blank" style="color: var(--gray); text-decoration: none;">www.logicbin.com.br</a></li>
+                        <li><i class="fab fa-whatsapp"></i> +55 11 95362-1063</li>
+                    </ul>
                 </div>
                 
                 <div class="footer-col">
@@ -839,16 +623,6 @@
                     <ul class="contact-list">
                         <li><a href="#portfolio" style="color: var(--gray); text-decoration: none;">Projetos em Destaque</a></li>
                         <li><a href="#tecnologias" style="color: var(--gray); text-decoration: none;">Tecnologias</a></li>
-                        <li><a href="/projetos.html" style="color: var(--gray); text-decoration: none;">Ver Todos os Projetos</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul class="contact-list">
-                        <li><i class="fas fa-envelope"></i> email@logicbin.com</li>
-                        <li><i class="fas fa-phone"></i> (XX) 9XXXX-XXXX</li>
-                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</li>
                     </ul>
                 </div>
             </div>
@@ -860,7 +634,7 @@
     </footer>
 
     <script>
-        // Script para o filtro de projetos (Mantido o original)
+        // Script para o filtro de projetos
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
@@ -875,10 +649,8 @@
                     projectCards.forEach(card => {
                         if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
                             card.style.display = 'block';
-                            card.classList.add('fade-in');
                         } else {
                             card.style.display = 'none';
-                            card.classList.remove('fade-in');
                         }
                     });
                 });
