@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGICBIN - Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Estilos baseados no index.html para consistência */
+        :root {
+            --black: #000000;
+            --black-light: #0a0a0a;
+            --black-card: #111111;
+            --green-primary: #00ff88;
+            --green-secondary: #00cc6a;
+            --green-glow: rgba(0, 255, 136, 0.2);
+            --white: #ffffff;
+            --gray: #888888;
+            --gray-dark: #222222;
+            --gradient-green: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header e Navegação */
+        .main-header { background: var(--black); padding: 20px 0; border-bottom: 1px solid var(--gray-dark); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--green-primary); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--green-primary); }
+
+        /* Seção de Contato */
+        .contact-section { padding: 80px 0; min-height: 80vh; }
+        .contact-section h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; color: var(--white); margin-bottom: 10px; text-align: center; }
+        .contact-section p { color: var(--gray); font-size: 1.1rem; margin-bottom: 40px; text-align: center; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Formulário */
+        .contact-form {
+            background: var(--black-card);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray-dark);
+            border-radius: 8px;
+            background: var(--black-light);
+            color: var(--white);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--green-primary);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: var(--gradient-green);
+            color: var(--black);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px var(--green-glow);
+        }
+
+        /* Informações de Contato */
+        .contact-info {
+            padding: 40px;
+            border-radius: var(--radius);
+            background: var(--black-card);
+            border: 1px solid var(--gray-dark);
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--green-primary);
+            margin-right: 20px;
+        }
+
+        .info-item h3 {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .info-item a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .info-item a:hover {
+            color: var(--green-primary);
+        }
+
+        /* Footer */
+        .main-footer { background: var(--black-light); padding: 4rem 0 2rem; border-top: 1px solid var(--gray-dark); }
+        .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid var(--gray-dark); color: var(--gray); font-size: 0.9rem; }
+        .copyright a { color: var(--green-primary); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">LOGICBIN - PORTFOLIO</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Projetos</a></li>
+                    <li><a href="index.html#tecnologias">Tecnologias</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section">
+        <div class="container">
+            <h1>Fale Conosco</h1>
+            <p>Pronto para iniciar seu projeto de Power Platform? Envie uma mensagem e vamos transformar seus processos.</p>
+
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <!-- ATENÇÃO: Para que o formulário funcione em um site estático (GitHub Pages), você precisará de um serviço como Formspree ou Netlify Forms. Substitua o 'action' abaixo pelo seu endpoint. -->
+                    <form action="https://formspree.io/f/seu-endpoint-aqui" method="POST">
+                        <div class="form-group">
+                            <label for="name">Seu Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Seu E-mail</label>
+                            <input type="email" id="email" name="_replyto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-mail Comercial</h3>
+                            <a href="mailto:leonardo.zanre@logicbin.com.br">leonardo.zanre@logicbin.com.br</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/5511953621063" target="_blank">+55 (11) 95362-1063</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h3>Site da Empresa</h3>
+                            <a href="https://www.logicbin.com.br" target="_blank">www.logicbin.com.br</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-youtube"></i>
+                        <div>
+                            <h3>Canal no YouTube</h3>
+                            <a href="https://www.youtube.com/@leonardozanre-logicbin" target="_blank">/leonardozanre-logicbin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados. | Contato: <a href="mailto:leonardo.zanre@logicbin.com.br">leonardo.zanre@logicbin.com.br</a> | WhatsApp: <a href="https://wa.me/5511953621063" target="_blank">+55 (11) 95362-1063</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
