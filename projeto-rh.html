@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Estilos baseados no index.html para consistência */
         :root {
             --black: #000000;
             --black-light: #0a0a0a;
@@ -30,18 +29,32 @@
         body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
         
-        /* Header e Título */
-        .main-header { padding: 20px 0; border-bottom: 1px solid var(--gray-dark); }
+        /* Header */
+        .main-header { 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-dark);
+            padding: 15px 0;
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--green-primary); text-decoration: none; }
-        
-        /* Layout Principal (Duas Colunas) */
-        .project-hero { padding: 80px 0 40px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 1rem; padding: 8px 16px; border-radius: 50px; transition: var(--transition); }
+        .nav-links a:hover { background: var(--green-primary); color: var(--black); }
+
+        /* Layout Principal */
+        .project-hero { padding: 120px 0 40px; }
         .project-title { font-size: 3rem; color: var(--white); margin-bottom: 10px; }
         .project-subtitle { color: var(--green-primary); font-size: 1.2rem; margin-bottom: 30px; }
         
         .content-grid {
             display: grid;
-            grid-template-columns: 3fr 1fr; /* 75% para conteúdo, 25% para sidebar */
+            grid-template-columns: 3fr 1fr;
             gap: 40px;
             padding-bottom: 80px;
         }
@@ -67,102 +80,66 @@
             border-radius: 2px;
         }
 
-        .main-content p {
-            color: var(--gray);
-            margin-bottom: 15px;
-        }
+        .main-content p { color: var(--gray); margin-bottom: 15px; }
 
         .project-video-container {
             margin: 30px 0;
             border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: var(--shadow-card);
+            border: 1px solid var(--gray-dark);
+            background: var(--black-card);
         }
         
-        .project-video-container video {
-            width: 100%;
-            display: block;
-        }
+        .project-video-container video { width: 100%; display: block; }
 
         /* Sidebar */
         .sidebar {
             background: var(--black-card);
-            padding: 20px;
+            padding: 25px;
             border-radius: var(--radius);
             height: fit-content;
             border: 1px solid var(--gray-dark);
+            position: sticky;
+            top: 100px;
         }
 
         .sidebar h3 {
             font-family: 'Montserrat', sans-serif;
             color: var(--green-primary);
             font-size: 1.4rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--gray-dark);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--gray-dark);
             padding-bottom: 10px;
         }
 
-        .sidebar-item {
-            margin-bottom: 20px;
-        }
-
-        .sidebar-item strong {
-            display: block;
-            color: var(--white);
-            margin-bottom: 5px;
-        }
-
-        .sidebar-item span {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
+        .sidebar-item { margin-bottom: 20px; }
+        .sidebar-item strong { display: block; color: var(--white); margin-bottom: 5px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .sidebar-item span { color: var(--gray); font-size: 1rem; }
 
         .tech-tag {
             display: inline-block;
             background: rgba(0, 255, 136, 0.1);
             color: var(--green-primary);
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 15px;
             font-size: 0.8rem;
-            font-weight: 500;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        /* Tabela de Resultados */
-        .results-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .results-table th, .results-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--gray-dark);
-        }
-
-        .results-table th {
-            background-color: var(--black-light);
-            color: var(--green-primary);
             font-weight: 600;
+            margin: 0 5px 8px 0;
         }
 
-        .results-table tr:hover {
-            background-color: var(--gray-dark);
-        }
+        /* Tabela */
+        .results-table { width: 100%; border-collapse: collapse; margin: 30px 0; background: var(--black-card); border-radius: var(--radius); overflow: hidden; }
+        .results-table th, .results-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--gray-dark); }
+        .results-table th { background: var(--gray-dark); color: var(--green-primary); font-weight: 700; }
+        .results-table tr:hover { background: rgba(255, 255, 255, 0.02); }
 
         /* Footer */
         .main-footer { background: var(--black-light); padding: 4rem 0 2rem; border-top: 1px solid var(--gray-dark); }
         .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid var(--gray-dark); color: var(--gray); font-size: 0.9rem; }
 
         @media (max-width: 1024px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                margin-top: 40px;
-            }
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; margin-top: 40px; }
         }
     </style>
 </head>
@@ -207,14 +184,12 @@
             <p>O sistema é construído sobre o Dataverse, garantindo segurança e escalabilidade para dados sensíveis de RH.</p>
 
             <h2>Resultados e Impacto</h2>
-            <p>A digitalização dos processos de RH resultou em uma experiência mais fluida para o colaborador e em dados estratégicos para a diretoria.</p>
-            
             <table class="results-table">
                 <thead>
                     <tr>
                         <th>Métrica</th>
-                        <th>Antes da Solução</th>
-                        <th>Depois da Solução</th>
+                        <th>Antes</th>
+                        <th>Depois</th>
                         <th>Impacto</th>
                     </tr>
                 </thead>
@@ -234,14 +209,14 @@
                     <tr>
                         <td>Visibilidade de KPIs</td>
                         <td>Trimestral</td>
-                        <td>Tempo Real (Power BI)</td>
+                        <td>Tempo Real</td>
                         <td>Decisão Estratégica</td>
                     </tr>
                 </tbody>
             </table>
 
             <h2>Passo a Passo Técnico</h2>
-            <p>O destaque técnico foi a integração do Power Apps com o Power BI. Criamos um componente de Power Apps que filtra o dashboard de Power BI embutido na tela, permitindo que o gestor selecione um departamento e veja os KPIs filtrados instantaneamente. Além disso, a lógica de cálculo de saldo de férias foi implementada com fórmulas complexas de Power Fx, garantindo a precisão dos dados.</p>
+            <p>O destaque técnico foi a integração do Power Apps com o Power BI. Criamos um componente de Power Apps que filtra o dashboard de Power BI embutido na tela, permitindo que o gestor selecione um departamento e veja os KPIs filtrados instantaneamente.</p>
         </div>
 
         <div class="sidebar">
@@ -255,7 +230,7 @@
             <div class="sidebar-item">
                 <strong>Tecnologias</strong>
                 <div>
-                    <span class="tech-tag">Power Apps Canvas</span>
+                    <span class="tech-tag">Power Apps</span>
                     <span class="tech-tag">Power Automate</span>
                     <span class="tech-tag">Dataverse</span>
                     <span class="tech-tag">Power BI</span>
@@ -264,12 +239,17 @@
             
             <div class="sidebar-item">
                 <strong>Funcionalidades</strong>
-                <span>Recrutamento, Onboarding, Gestão de Férias, Benefícios, Avaliação de Desempenho, Dashboards.</span>
+                <span>Recrutamento, Onboarding, Gestão de Férias, Benefícios, Avaliação de Desempenho.</span>
             </div>
             
             <div class="sidebar-item">
-                <strong>Link do Projeto</strong>
-                <a href="https://github.com/leonardozanre/projeto-rh" target="_blank" style="color: var(--green-primary); text-decoration: none; font-weight: 600;">Ver Código no GitHub <i class="fas fa-external-link-alt"></i></a>
+                <strong>Contato Comercial</strong>
+                <a href="https://wa.me/5511953621063" target="_blank" style="color: var(--green-primary); text-decoration: none; font-weight: 600; display: block; margin-top: 10px;">
+                    <i class="fab fa-whatsapp"></i> +55 11 95362-1063
+                </a>
+                <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--green-primary); text-decoration: none; font-weight: 600; display: block; margin-top: 5px;">
+                    <i class="fas fa-envelope"></i> leonardo.zanre@logicbin.com.br
+                </a>
             </div>
         </div>
     </div>
@@ -278,7 +258,9 @@
     <footer class="main-footer">
         <div class="container">
             <div class="copyright">
-                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados. | Contato: <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--green-primary);">leonardo.zanre@logicbin.com.br</a> | WhatsApp: <a href="https://wa.me/5511953621063" target="_blank" style="color: var(--green-primary);">+55 (11) 95362-1063</a>
+                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados. | 
+                <a href="mailto:leonardo.zanre@logicbin.com.br" style="color: var(--green-primary); text-decoration: none;">E-mail</a> | 
+                <a href="https://wa.me/5511953621063" target="_blank" style="color: var(--green-primary); text-decoration: none;">WhatsApp</a>
             </div>
         </div>
     </footer>
