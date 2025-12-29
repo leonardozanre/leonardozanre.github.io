@@ -3,416 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Compras | Portfólio Power Platform</title>
-    <meta name="description" content="Sistema completo de compras desenvolvido com Power Apps, Power Automate e Dataverse.">
-    
+    <title>LOGICBIN - Sistema de Compras Automatizado</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* Estilos baseados no index.html para consistência */
         :root {
             --black: #000000;
             --black-light: #0a0a0a;
             --black-card: #111111;
             --green-primary: #00ff88;
             --green-secondary: #00cc6a;
+            --green-glow: rgba(0, 255, 136, 0.2);
             --white: #ffffff;
             --gray: #888888;
             --gray-dark: #222222;
-            
             --gradient-green: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
-            --gradient-black: linear-gradient(135deg, var(--black), var(--black-light));
             --radius: 12px;
-            --transition: all 0.3s ease;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header e Título */
+        .main-header { padding: 20px 0; border-bottom: 1px solid var(--gray-dark); }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--green-primary); text-decoration: none; }
+        
+        /* Layout Principal (Duas Colunas) */
+        .project-hero { padding: 80px 0 40px; }
+        .project-title { font-size: 3rem; color: var(--white); margin-bottom: 10px; }
+        .project-subtitle { color: var(--green-primary); font-size: 1.2rem; margin-bottom: 30px; }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* 75% para conteúdo, 25% para sidebar */
+            gap: 40px;
+            padding-bottom: 80px;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--black);
-            color: var(--white);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
+        .main-content h2 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        h1 {
-            font-size: 3rem;
-            background: var(--gradient-green);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
             font-size: 2rem;
             color: var(--white);
-            margin: 2rem 0 1rem;
-            border-left: 4px solid var(--green-primary);
-            padding-left: 1rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .main-content h2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: var(--gradient-green);
+            border-radius: 2px;
         }
 
-        h3 {
-            font-size: 1.5rem;
-            color: var(--green-primary);
-            margin: 1.5rem 0 1rem;
+        .main-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .project-header {
-            background: var(--gradient-black);
-            padding: 100px 0 50px;
-            border-bottom: 1px solid var(--gray-dark);
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--green-primary);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            transition: var(--transition);
-        }
-
-        .back-link:hover {
-            opacity: 0.8;
-        }
-
-        .project-meta {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .meta-item i {
-            color: var(--green-primary);
-        }
-
-        /* Conteúdo */
-        .project-content {
-            padding: 50px 0;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .video-container {
-            background: var(--black-card);
+        .project-video-container {
+            margin: 30px 0;
             border-radius: var(--radius);
             overflow: hidden;
-            border: 1px solid var(--gray-dark);
+            box-shadow: var(--shadow-card);
         }
-
-        .project-video {
+        
+        .project-video-container video {
             width: 100%;
             display: block;
         }
 
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
+        /* Sidebar */
+        .sidebar {
+            background: var(--black-card);
+            padding: 20px;
+            border-radius: var(--radius);
+            height: fit-content;
+            border: 1px solid var(--gray-dark);
+        }
+
+        .sidebar h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--green-primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--gray-dark);
+            padding-bottom: 10px;
+        }
+
+        .sidebar-item {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-item strong {
+            display: block;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .sidebar-item span {
+            color: var(--gray);
+            font-size: 0.9rem;
         }
 
         .tech-tag {
+            display: inline-block;
             background: rgba(0, 255, 136, 0.1);
             color: var(--green-primary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 5px;
+            margin-bottom: 5px;
         }
 
-        .info-card {
-            background: var(--black-card);
-            border: 1px solid var(--gray-dark);
-            border-radius: var(--radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
+        /* Tabela de Resultados */
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
 
-        .result-item {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-            border-left: 3px solid var(--green-primary);
+        .results-table th, .results-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-dark);
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            margin-top: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--gradient-green);
-            color: var(--black);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .btn-secondary {
-            background: transparent;
+        .results-table th {
+            background-color: var(--black-light);
             color: var(--green-primary);
-            border: 2px solid var(--green-primary);
+            font-weight: 600;
         }
 
-        .btn-secondary:hover {
-            background: var(--green-primary);
-            color: var(--black);
+        .results-table tr:hover {
+            background-color: var(--gray-dark);
         }
 
         /* Footer */
-        .project-footer {
-            background: var(--black-card);
-            padding: 3rem 0;
-            border-top: 1px solid var(--gray-dark);
-            margin-top: 4rem;
-        }
+        .main-footer { background: var(--black-light); padding: 4rem 0 2rem; border-top: 1px solid var(--gray-dark); }
+        .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid var(--gray-dark); color: var(--gray); font-size: 0.9rem; }
 
-        .navigation-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-
-        .copyright {
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-top: 3rem;
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                margin-top: 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header do Projeto -->
-    <header class="project-header">
+    <!-- Header -->
+    <header class="main-header">
         <div class="container">
-            <a href="projetos.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Voltar para Todos os Projetos
-            </a>
-            
-            <h1>Sistema de Compras Automatizado</h1>
-            <p style="font-size: 1.2rem; color: var(--gray); max-width: 800px;">
-                Aplicação completa desenvolvida com Power Platform para gestão de processos de compras corporativas, 
-                desde a requisição até o pagamento, com aprovações automatizadas e integração com fornecedores.
-            </p>
-            
-            <div class="project-meta">
-                <div class="meta-item">
-                    <i class="fas fa-calendar"></i>
-                    <span>2024 • Em andamento</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-industry"></i>
-                    <span>Segmento: Industrial</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-clock"></i>
-                    <span>Duração: 3 meses</span>
-                </div>
-            </div>
+            <a href="index.html" class="logo">LOGICBIN - PORTFOLIO</a>
         </div>
     </header>
 
     <!-- Conteúdo Principal -->
-    <section class="project-content">
+    <section class="project-hero">
         <div class="container">
-            <div class="project-grid">
-                <!-- Coluna Principal -->
-                <div>
-                    <h2>Demonstração do Sistema</h2>
-                    <div class="video-container">
-                        <video class="project-video" controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                            <source src="app_compras_app.mp4" type="video/mp4">
-                            Seu navegador não suporta o vídeo.
-                        </video>
-                    </div>
-
-                    <h2>Desafio do Cliente</h2>
-                    <p>Empresa industrial com processos de compras totalmente manuais, utilizando planilhas Excel compartilhadas por e-mail, resultando em:</p>
-                    <ul style="margin: 1rem 0 1rem 2rem; color: var(--gray);">
-                        <li>Perda de documentos importantes</li>
-                        <li>Atrasos nas aprovações (média de 7 dias)</li>
-                        <li>Falta de visibilidade do processo</li>
-                        <li>Dificuldade em gerar relatórios</li>
-                        <li>Erros frequentes em cálculos manuais</li>
-                    </ul>
-
-                    <h2>Solução Implementada</h2>
-                    <p>Desenvolvi um sistema completo baseado em Power Platform com as seguintes funcionalidades:</p>
-                    
-                    <div class="info-card">
-                        <h3><i class="fas fa-clipboard-list"></i> Requisição de Compras</h3>
-                        <p>Formulário digital com validação em tempo real, cálculo automático de totais e upload de documentos.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3><i class="fas fa-check-circle"></i> Fluxo de Aprovações</h3>
-                        <p>Workflow automatizado com notificações via Teams e e-mail, aprovações por hierarquia e histórico completo.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3><i class="fas fa-exchange-alt"></i> Integração com Fornecedores</h3>
-                        <p>Conexão via API com sistemas dos fornecedores para cotação automática e status de entrega.</p>
-                    </div>
-
-                    <h2>Tecnologias Utilizadas</h2>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Power Apps (Canvas App)</span>
-                        <span class="tech-tag">Power Automate (15 fluxos)</span>
-                        <span class="tech-tag">Dataverse (10 tabelas)</span>
-                        <span class="tech-tag">SharePoint (Documentos)</span>
-                        <span class="tech-tag">Power BI (Dashboard)</span>
-                        <span class="tech-tag">Microsoft Teams</span>
-                        <span class="tech-tag">Outlook Integration</span>
-                    </div>
-
-                    <h2>Resultados Alcançados</h2>
-                    <div class="result-item">
-                        <h3>70% Redução no Tempo de Processamento</h3>
-                        <p>Processo que levava 7 dias agora é concluído em 2 dias.</p>
-                    </div>
-                    
-                    <div class="result-item">
-                        <h3>90% Eliminação de Erros Manuais</h3>
-                        <p>Validações automáticas eliminaram erros em cálculos e dados.</p>
-                    </div>
-                    
-                    <div class="result-item">
-                        <h3>100% Visibilidade do Processo</h3>
-                        <p>Dashboard em tempo real para acompanhamento de status.</p>
-                    </div>
-                </div>
-
-                <!-- Sidebar -->
-                <div>
-                    <div class="info-card">
-                        <h3>Detalhes do Projeto</h3>
-                        <p><strong>Cliente:</strong> Empresa Industrial Multinacional</p>
-                        <p><strong>Equipe:</strong> Desenvolvimento solo (Leonardo Zanré)</p>
-                        <p><strong>Usuários:</strong> 50+ usuários ativos</p>
-                        <p><strong>Ambiente:</strong> Power Platform Premium</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Funcionalidades Principais</h3>
-                        <ul style="margin: 1rem 0 1rem 1.5rem; color: var(--gray);">
-                            <li>Requisição digital de compras</li>
-                            <li>Aprovações hierárquicas</li>
-                            <li>Integração com ERP</li>
-                            <li>Dashboard analítico</li>
-                            <li>Notificações automáticas</li>
-                            <li>Gestão de fornecedores</li>
-                            <li>Relatórios automáticos</li>
-                        </ul>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Próximos Passos</h3>
-                        <p>Expansão para módulos de:</p>
-                        <ul style="margin: 1rem 0 1rem 1.5rem; color: var(--gray);">
-                            <li>Gestão de contratos</li>
-                            <li>Controle de inventário</li>
-                            <li>Integração com logística</li>
-                        </ul>
-                    </div>
-
-                    <a href="#contato" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                        <i class="fas fa-envelope"></i> Quer uma Solução Similar?
-                    </a>
-                </div>
-            </div>
+            <h1 class="project-title">Sistema de Compras Automatizado</h1>
+            <p class="project-subtitle">Power Apps, Power Automate e Dataverse</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="project-footer">
-        <div class="container">
-            <div class="navigation-links">
-                <a href="projeto-ged.html" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i> Projeto Anterior
-                </a>
-                
-                <a href="projeto-operacional.html" class="btn btn-secondary">
-                    Próximo Projeto <i class="fas fa-arrow-right"></i>
-                </a>
+    <div class="container content-grid">
+        <div class="main-content">
+            <h2>O Desafio</h2>
+            <p>A gestão de compras era um processo lento e propenso a erros, dependente de e-mails e planilhas. A falta de um fluxo de aprovação centralizado resultava em atrasos, compras fora do orçamento e dificuldade em rastrear o status de cada requisição.</p>
+
+            <div class="project-video-container">
+                <video controls loop muted autoplay>
+                    <source src="app_compras_app(2).mp4" type="video/mp4">
+                    Seu navegador não suporta o vídeo.
+                </video>
+            </div>
+
+            <h2>A Solução: Power Platform</h2>
+            <p>Desenvolvemos um aplicativo completo no Power Apps Canvas que centraliza todo o ciclo de vida da requisição de compras. O Power Automate foi essencial para criar um fluxo de aprovação multinível, garantindo que as requisições fossem automaticamente roteadas para os gestores corretos.</p>
+            
+            <p>O Dataverse (ou SharePoint) serviu como a base de dados robusta, armazenando requisições, fornecedores e histórico de aprovações de forma segura e escalável.</p>
+
+            <h2>Resultados e Impacto</h2>
+            <p>A implementação resultou em ganhos significativos de eficiência e controle financeiro, transformando um gargalo operacional em um processo ágil e transparente.</p>
+            
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Antes da Solução</th>
+                        <th>Depois da Solução</th>
+                        <th>Impacto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tempo de Aprovação</td>
+                        <td>3 a 5 dias</td>
+                        <td>1 dia</td>
+                        <td>Redução de 70%</td>
+                    </tr>
+                    <tr>
+                        <td>Compras Fora do Orçamento</td>
+                        <td>Frequente</td>
+                        <td>Praticamente Eliminado</td>
+                        <td>Controle Total</td>
+                    </tr>
+                    <tr>
+                        <td>Visibilidade do Status</td>
+                        <td>Baixa (e-mails)</td>
+                        <td>Tempo Real (App)</td>
+                        <td>Transparência Total</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Passo a Passo Técnico</h2>
+            <p>A lógica de aprovação foi o ponto chave. Utilizamos o Power Automate com a ação "Start and wait for an approval" para criar um fluxo sequencial. A condição de aprovação era dinâmica, baseada no valor da requisição:</p>
+            <ul>
+                <li>**Até R$ 5.000:** Aprovação do Gestor Direto.</li>
+                <li>**Acima de R$ 5.000:** Aprovação do Gestor Direto + Diretor Financeiro.</li>
+            </ul>
+            <p>No Power Apps, a função `Patch` foi usada para atualizar o status da requisição no Dataverse após a conclusão do fluxo do Power Automate.</p>
+        </div>
+
+        <div class="sidebar">
+            <h3>Detalhes do Projeto</h3>
+            
+            <div class="sidebar-item">
+                <strong>Cliente</strong>
+                <span>Confidencial (Setor Industrial)</span>
             </div>
             
+            <div class="sidebar-item">
+                <strong>Tecnologias</strong>
+                <div>
+                    <span class="tech-tag">Power Apps Canvas</span>
+                    <span class="tech-tag">Power Automate</span>
+                    <span class="tech-tag">Dataverse</span>
+                    <span class="tech-tag">Power BI (Relatórios)</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-item">
+                <strong>Funcionalidades</strong>
+                <span>Requisição de Compras, Fluxo de Aprovação, Gestão de Fornecedores, Histórico de Pedidos.</span>
+            </div>
+            
+            <div class="sidebar-item">
+                <strong>Link do Projeto</strong>
+                <a href="https://github.com/leonardozanre/projeto-compras" target="_blank" style="color: var(--green-primary); text-decoration: none; font-weight: 600;">Ver Código no GitHub <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
             <div class="copyright">
-                © 2024 Leonardo Zanré | Power Platform Expert
+                &copy; 2024 LOGICBIN - PORTFOLIO. Todos os direitos reservados.
             </div>
         </div>
     </footer>
-
-    <script>
-        // Controle do vídeo
-        const video = document.querySelector('.project-video');
-        if (video) {
-            video.addEventListener('loadeddata', function() {
-                console.log('Vídeo carregado com sucesso');
-            });
-            
-            video.addEventListener('error', function() {
-                console.log('Erro ao carregar vídeo');
-                video.parentElement.innerHTML = `
-                    <div style="padding: 2rem; text-align: center;">
-                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--green-primary); margin-bottom: 1rem;"></i>
-                        <h3>Vídeo não disponível</h3>
-                        <p>Entre em contato para ver a demonstração completa</p>
-                        <a href="mailto:leonardo.zanre@logicbin.com.br" class="btn btn-primary" style="margin-top: 1rem;">
-                            <i class="fas fa-envelope"></i> Solicitar Demonstração
-                        </a>
-                    </div>
-                `;
-            });
-        }
-    </script>
 </body>
 </html>
